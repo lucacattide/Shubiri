@@ -17,6 +17,7 @@
     <link type="text/css" rel="stylesheet" href="css/bootstrap-extend.css">
     <link type="text/css" rel="stylesheet" href="css/common.css">
     <link type="text/css" rel="stylesheet" href="css/responsive.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 <body class="login-page">
 <!--Page Container Start Here-->
@@ -27,11 +28,22 @@
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="j-forms" id="forms-login" novalidate enctype="multipart/form-data">
 
         <div class="login-form-header">
-            <div class="logo">
-                <!--<a href="index.php" title="Admin Template"></a> -->
-                 <!--<img src="images/logo-dark.png" alt="logo">-->
-                 <h2> Shubiri | Admin </h2>
-                
+        	<div class="row">
+            	<div class="col-md-2">
+                </div>
+            	<div class="col-md-8">
+            
+      
+                  <div class="logo">
+                      <!--<a href="index.php" title="Admin Template"></a> -->
+                       <img src="images/logo_shubiri.svg" alt="Shubiri">
+                       <!--<h2> Shubiri</h2>-->
+                      
+                  </div>
+                  
+                </div>
+              <div class="col-md-2">
+                </div>
             </div>
         </div>
         <div class="login-form-content">
@@ -44,7 +56,7 @@
                     <label class="icon-left" for="login">
                         <i class="zmdi zmdi-account"></i>
                     </label>
-                    <input class="form-control login-frm-input"  type="text" id="login" name="user" placeholder="Username">
+                    <input class="form-control login-frm-input"  type="text" id="login" name="user" placeholder="Nome utente">
                 </div>
             </div>
             <!-- end login -->
@@ -69,7 +81,7 @@
                 <label class="checkbox">
                     <input type="checkbox" name="logged" value="false" checked="">
                     <i></i>
-                    Resta connessso
+                    Ricordami
                 </label>
             </div>
             <!-- end keep logged -->
@@ -82,7 +94,7 @@
 
         </div>
         <div class="login-form-footer">
-            <button name="login" type="submit" class="btn-block btn btn-primary">Sign in</button>
+            <button name="login" type="submit" class="btn-block btn btn-primary">Login</button>
         </div>
 
     </form>
@@ -95,7 +107,14 @@
         <div class="row">
             <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
                 <div class="footer-content">
-                    <span class="footer-meta">POWERED BY &nbsp;&nbsp; <a href="http://www.laboratorio-a.it">laboratorio-a</a></span>
+                    <span class="footer-meta">POWERED BY &nbsp;&nbsp; <a href="http://www.laboratorio-a.it" title="laboratorio-a" target="new">laboratorio-a</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
+                <div class="footer-content">
+                    <span class="footer-meta"><small>Il logo Shubiri&trade; è un marchio registrato &reg; da Radeesh Servino.<br />&copy; Shubiri 2016 - Tutti i Diritti riservati.</small></span>
                 </div>
             </div>
         </div>
