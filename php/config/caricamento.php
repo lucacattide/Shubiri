@@ -14,10 +14,23 @@
     	while ( $rowAccount = $rAccount->fetch_array() ):
         	if( $rowAccount["admin_accesso"] == 1 ):
             else:
+			
+				if( $rowAccount["admin_accesso"] == 2 ) {
+							
+							$livello = "Amministratore";
+							$livelloContainer = "bg".$livello;
+							
+						} elseif( $rowAccount["admin_accesso"] == 3 ) {
+							
+							$livello = "Utente";
+							$livelloContainer = "bg".$livello;
+							
+						}
+						
 			?>
 			 <tr>
 			  <td><?php echo $rowAccount["admin_user"];  ?></td>
-			  <td><label class="label label-info"><?php echo $rowAccount["admin_accesso"];  ?></label></td>
+			  <td><label class="label label-info <?php echo $livelloContainer; ?>"><?php echo $livello;  ?></label></td>
 			  <td class="td-center">
 			   <div class="btn-toolbar" role="toolbar">
 				<div class="btn-group" role="group"> 

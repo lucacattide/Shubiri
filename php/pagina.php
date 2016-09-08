@@ -2,19 +2,17 @@
     <div class="row">
         <div class="col-md-6">
             <h2>Pagine</h2>
-            <p>Gestisci Pagine</p>
+            <p>Gestione pagine</p>
         </div>
         <div class="col-md-6">
             <ul class="list-page-breadcrumb">
-                <li><a href="index.php?pag=account">Pagine<i class="zmdi"></i></a></li>
-                <!--<li><a href="#">Layout <i class="zmdi zmdi-chevron-right"></i></a></li>
-                <li class="active-page"> Tabby Leftbar</li> -->
+                <li><a href="index.php" title="Home">Home<i class="zmdi"></i></a> | <a href="index.php?pag=pagina" title="Pagine"><i class="zmdi"></i>Pagine</a></li>
             </ul>
         </div>
     </div>
 </div>
 
-<div class="btnAdd-page">
+<div class="btnAdd-page btn-primary">
  <a class="aggiungi" title="Aggiungi Pagina"  href="#"><i class="zmdi zmdi-plus zmdi-hc-fw"></i></a>
 </div>
 
@@ -24,14 +22,14 @@
     <div class="widget-wrap">
       <div class="widget-header block-header margin-bottom-0 clearfix">
         <div class="pull-left">
-        <h3>Lista Pagine</h3>
-        <p>Gestisci le pagine</p>
+        <h3>Pagine attive</h3>
+        <p>Gestione pagine pubblicate</p>
         </div>
         <div class="pull-right w-action">
           <ul class="widget-action-bar">
             <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="zmdi zmdi-more"></i></a>
               <ul class="dropdown-menu">
-                <li class="widget-reload"><a href="#"><i class="zmdi "></i></a></li>
+                <li class="widget-reload"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
                 <li class="widget-toggle"><a href="#"><i class="zmdi zmdi-chevron-down"></i></a></li>
                 <li class="widget-fullscreen"><a href="#"><i class="zmdi zmdi-fullscreen"></i></a></li>
                 <li class="widget-exit"><a href="#"><i class="zmdi zmdi-power"></i></a></li>
@@ -46,10 +44,10 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>Nome pagina</th>
-                  <th>Url</th>
+                  <th>Nome file</th>
+                  <th>URL SEF</th>
                   <th>Livello pagina</th>
-                  <th class="td-center">Action</th>
+                  <th class="td-center">Azioni</th>
                 </tr>
               </thead>
               <tbody class="insertContentQuery">
@@ -66,7 +64,7 @@
                   <td>
 				   <?php 
 				     /* RICHIAMO PAGINA PRIMARIA*/
-				     if($rowPagina["pagina_dipendenza_id"] == 0): echo "Pagina Primaria"; else:  
+				     if($rowPagina["pagina_dipendenza_id"] == 0): echo "Pagina primaria"; else:  
 	  					$sqlPagina2 = "SELECT * FROM `pagina` WHERE pagina_id = '".$rowPagina["pagina_dipendenza_id"]."'"; 
   						$rPagina2 = $mysqli->query($sqlPagina2);
 						while ( $rowPagina2 = $rPagina2->fetch_array() ):  echo $rowPagina2["pagina_url"]; endwhile;

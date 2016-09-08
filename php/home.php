@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-<title>Shubiri | Admin</title>
+<title>Shubiri | Amministrazione</title>
 <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
 <link type="text/css" rel="stylesheet" href="css/material-design-iconic-font.css">
 <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
@@ -20,6 +20,8 @@
 <link type="text/css" rel="stylesheet" href="css/responsive.css">
 <link href="css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
 <link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/style_custom.css">
+<link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body class="leftbar-view">
 <!--Topbar Start Here-->
@@ -30,7 +32,7 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <div class="search-input-addon"> <span class="addon-icon"><i class="zmdi zmdi-search"></i></span>
-            <input type="text" class="form-control top-search-input" placeholder="Search">
+            <input type="text" class="form-control top-search-input" placeholder="Cerca">
           </div>
         </div>
       </div>
@@ -41,11 +43,9 @@
   <div class="topbar-left pull-left">
     <div class="clearfix">
       <ul class="left-branding pull-left clickablemenu ttmenu dark-style menu-color-gradient">
-        <li><span class="left-toggle-switch"><i class="zmdi zmdi-menu"></i></span>
-          <span class="logo"> <a href="index.php" title="Shubiri"> 
-            <!-- <h3 style="margin-top:15px;">Shubiri</h3>--> 
-            <img src="images/logo_shubiri.svg" alt="Shubiri" /> </a> </span>
-        </li>
+        <li><span class="left-toggle-switch"><i class="zmdi zmdi-menu"></i></span> <span class="logo"> <a href="index.php" title="Shubiri"> 
+          <!-- <h3 style="margin-top:15px;">Shubiri</h3>--> 
+          <img src="images/logo_shubiri.svg" alt="Shubiri" /> </a> </span> </li>
       </ul>
       <!--Mobile Search and Rightbar Toggle-->
       <ul class="branding-right pull-right">
@@ -63,61 +63,8 @@
         <li><span class="left-toggle-switch"><i class="zmdi zmdi-menu"></i></span></li>
       </ul>
       <ul class="pull-right top-right-icons">
-        <li><a href="#" class="btn-top-search"><i class="zmdi zmdi-search"></i></a></li>
-        <li class="dropdown apps-dropdown"> <a href="#" class="btn-apps dropdown-toggle" data-toggle="dropdown"><i class="zmdi zmdi-apps"></i></a>
-          <div class="dropdown-menu">
-            <ul class="apps-shortcut clearfix">
-              <li> <a href="#"><i class="zmdi zmdi-email"></i> <span class="apps-noty">23</span> <span class="apps-label">Email</span> </a> </li>
-              <li> <a href="#"><i class="zmdi zmdi-accounts-alt"></i> <span class="apps-noty">15</span> <span class="apps-label">Forum</span> </a> </li>
-              <li> <a href="#"><i class="zmdi zmdi-file-text"></i> <span class="apps-label">Note</span> </a> </li>
-              <li> <a href="#"><i class="zmdi zmdi-chart"></i> <span class="apps-label">Analytics</span> </a> </li>
-            </ul>
-            <ul class="more-apps">
-              <li><a href="#"><i class="zmdi zmdi-camera"></i> Gallery</a></li>
-              <li><a href="#"><i class="zmdi zmdi-comments"></i> Chat</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="dropdown notifications-dropdown"> <a href="#" class="btn-notification dropdown-toggle" data-toggle="dropdown"><span class="noty-bubble">10</span><i class="zmdi zmdi-globe"></i></a>
-          <div class="dropdown-menu notifications-tabs">
-            <div>
-              <ul class="nav material-tabs nav-tabs" role="tablist">
-                <li class="active"><a href="#message" aria-controls="message" role="tab" data-toggle="tab">Message</a></li>
-                <li><a href="#notifications" aria-controls="notifications" role="tab" data-toggle="tab">Notifications</a></li>
-              </ul>
-              <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="message">
-                  <div class="message-list-container">
-                    <h4>You have 15 new messages</h4>
-                    <ul class="clearfix">
-                      <li class="clearfix"> <a href="#" class="message-thumb"><img src="images/avatar/robertoortiz.jpg" alt="image"> </a><a href="#" class="message-intro"><span class="message-meta">Robertoortiz </span>Nunc aliquam dolor... <span class="message-time">today at 10:20 pm</span></a> </li>
-                      <li class="clearfix"> <a href="#" class="message-thumb"><span class="message-letter w_bg_purple">A</span> </a><a href="#" class="message-intro"><span class="message-meta">Allisongrayce </span>In hac habitasse ... <span class="message-time">today at 8:29 pm</span></a> </li>
-                      <li class="clearfix"> <a href="#" class="message-thumb"><img src="images/avatar/michael-owens.jpg" alt="image"> </a><a href="#" class="message-intro"><span class="message-meta">Michael </span>Suspendisse ac mauris ... <span class="message-time">yesterday at 12:29 pm</span></a> </li>
-                      <li class="clearfix"> <a href="#" class="message-thumb"><span class="message-letter w_bg_blue">B</span> </a><a href="#" class="message-intro"><span class="message-meta">Bobbyjkane </span>Vivamus lacinia facilisis... <span class="message-time">yesterday at 11:48 pm</span></a> </li>
-                      <li class="clearfix"> <a href="#" class="message-thumb"><img src="images/avatar/bobbyjkane.jpg" alt="image"> </a><a href="#" class="message-intro"><span class="message-meta">Bobbyjkane </span>Donec vel iaculis ... <span class="message-time">1 month ago</span></a> </li>
-                      <li class="clearfix"> <a href="#" class="message-thumb"><span class="message-letter w_bg_teal">C</span> </a><a href="#" class="message-intro"><span class="message-meta">Chexee </span> Curabitur eget blandit...<span class="message-time">3 months ago</span></a> </li>
-                      <li class="clearfix"> <a href="#" class="message-thumb"><img src="images/avatar/coreyweb.jpg" alt="image"> </a><a href="#" class="message-intro"><span class="message-meta">Coreyweb </span>Etiam molestie nulla... <span class="message-time">1 year ago</span></a> </li>
-                    </ul>
-                    <a class="btn btn-link btn-block btn-view-all" href="#"><span>View All</span></a> </div>
-                </div>
-                <div role="tabpanel" class="tab-pane" id="notifications">
-                  <div class="notification-wrap">
-                    <h4>You have 10 new notifications</h4>
-                    <ul>
-                      <li><a href="#" class="clearfix"><span class="ni w_bg_purple"><i class="fa fa-bullhorn"></i></span><span class="notification-message">Pellentesque semper posuere. <span class="notification-time clearfix">3 Min Ago</span></span></a> </li>
-                      <li><a href="#" class="clearfix"><span class="ni w_bg_orange"><i class="fa fa-life-ring"></i></span><span class="notification-message">Nulla commodo sem at purus. <span class="notification-time clearfix">1 Hours Ago</span></span></a> </li>
-                      <li><a href="#" class="clearfix"><span class="ni w_bg_red"><i class="fa fa-star-o"></i></span><span class="notification-message">Fusce condimentum turpis. <span class="notification-time clearfix">3 Hours Ago</span></span></a> </li>
-                      <li><a href="#" class="clearfix"><span class="ni w_bg_light_blue"><i class="fa fa-trophy"></i></span><span class="notification-message">Pellentesque habitant morbi. <span class="notification-time clearfix">Yesterday</span></span></a> </li>
-                      <li><a href="#" class="clearfix"><span class="ni w_bg_cyan"><i class="fa fa-bolt"></i></span><span class="notification-message">Fusce bibendum lacus mauris.<span class="notification-time clearfix">1 Month Ago</span></span></a> </li>
-                      <li><a href="#" class="clearfix"><span class="ni w_bg_yellow"><i class="fa fa-bookmark-o"></i></span><span class="notification-message">Donec id mi placerat, scelerisque.<span class="notification-time clearfix">3 Months Ago</span></span></a> </li>
-                    </ul>
-                    <a class="btn btn-link btn-block btn-view-all clearfix" href="#"><span>View All</span></a> </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li><a href="#" class="right-toggle-switch"><i class="zmdi zmdi-format-align-left"></i><span class="more-noty"></span></a></li>
+        <li><a href="#" class="btn-top-search" title="Cerca"><i class="zmdi zmdi-search"></i></a></li>
+       <!-- <li><a href="#" class="right-toggle-switch" title="Assistenza"><i class="zmdi zmdi-format-align-left"></i><span class="more-noty"></span></a></li>-->
       </ul>
     </div>
   </div>
@@ -133,17 +80,14 @@
     <div class="tabby-leftbar">
       <ul class="nav nav-tabs material-tabs" role="tablist">
         <li class="active"><a href="#menu" aria-controls="message" role="tab" data-toggle="tab"> <i class="zmdi zmdi-view-headline"></i></a></li>
-        <li><a href="#task_tab" aria-controls="notifications" role="tab" data-toggle="tab"> <i class="zmdi zmdi-check-all"></i></a></li>
-        <li><a href="#email_tab" aria-controls="notifications" role="tab" data-toggle="tab"> <i class="zmdi zmdi-email"></i></a></li>
-        <li><a href="#support_tab" aria-controls="notifications" role="tab" data-toggle="tab"> <i class="zmdi zmdi-ticket-star"></i></a></li>
       </ul>
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="menu">
           <ul class="list-accordion">
-            <li class="list-title">Pagina</li>
-            <li class="list-title"><a href="index.php?pag=pagina">Gestisci Pagina</a></li>
-            <li class="list-title">Lista Pagine</li>
-            <li> <a href="#"><i class="zmdi zmdi-link"></i><span class="list-label">Elenco pagine</span></a>
+            <li class="list-title">Sezioni</li>
+            <li class="list-title"><a href="index.php?pag=pagina">Gestisci Pagine</a></li>
+            <li class="list-title">Pagine</li>
+            <li> <a href="#"><i class="zmdi zmdi-link"></i><span class="list-label">Pagine attive</span></a>
               <ul>
                 <?php
 							  $sqlListPagina = "SELECT * FROM `pagina`"; 
@@ -158,48 +102,6 @@
             </li>
           </ul>
         </div>
-        <div role="tabpanel" class="tab-pane" id="task_tab">
-          <ul class="task-box-list">
-            <li><a href="#"><i class="zmdi zmdi-assignment"></i><span>All Task</span><span class="new-item-count">20</span></a> </li>
-            <li><a href="#"><i class="zmdi zmdi-file-text"></i><span>New Task</span></a> </li>
-            <li><a href="#"><i class="zmdi zmdi-assignment-check"></i><span>To Do</span></a> </li>
-            <li><a href="#"><i class="zmdi zmdi-refresh-sync-alert"></i><span>Overdue</span></a> </li>
-            <li><a href="#"><i class="zmdi zmdi-check"></i><span>Done</span></a> </li>
-            <li><a href="#"><i class="zmdi zmdi-archive"></i><span>Archive</span></a> </li>
-          </ul>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="email_tab">
-          <div class="compose-btn">
-            <button type="button" class="btn btn-info btn-block compose-mail"><i class="ico-mode-edit"></i> Compose</button>
-          </div>
-          <ul class="mailbox-list">
-            <li><a href="#"><i class="zmdi zmdi-inbox"></i><span>Inbox</span><span class="new-item-count">20</span></a> </li>
-            <li><a href="#"><i class="zmdi zmdi-star"></i><span>Stared</span></a> </li>
-            <li><a href="#"><i class="zmdi zmdi-mail-send"></i><span>Sent Mail</span></a> </li>
-            <li><a href="#"><i class="zmdi zmdi-tag"></i><span>Important</span></a> </li>
-            <li><a href="#"><i class="zmdi zmdi-collection-text"></i><span>Draft</span></a> </li>
-            <li><a href="#"><i class="zmdi zmdi-delete"></i><span>Trash</span></a> </li>
-          </ul>
-          <div class="email-label-container">
-            <h5>Label</h5>
-            <ul class="label-list">
-              <li class="item-label" data-color="#4caf50"><a href="#" class="clearfix"><span class="pull-left">Envato</span><span class="label-color pull-right"></span></a> </li>
-              <li class="item-label" data-color="#9c27b0"><a href="#" class="clearfix"><span class="pull-left">Support</span><span class="label-color pull-right"></span></a> </li>
-              <li class="item-label" data-color="#f4511e"><a href="#" class="clearfix"><span class="pull-left">Product License</span><span class="label-color pull-right"></span></a> </li>
-              <li class="item-label" data-color="#8d6e63"><a href="#" class="clearfix"><span class="pull-left">Office</span><span class="label-color pull-right"></span></a> </li>
-            </ul>
-            <a href="#" class="add-more-label"><i class="zmdi zmdi-plus"></i> Create Label</a> </div>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="support_tab">
-          <ul class="support-box-list">
-            <li><a href="#"><i class="zmdi zmdi-assignment"></i><span>All Tickets</span><span class="new-item-count">20</span></a> </li>
-            <li><a href="#"><i class="zmdi zmdi-file-text"></i><span>New Tickets</span></a> </li>
-            <li><a href="#"><i class="zmdi zmdi-refresh-sync-alert"></i><span>Pending Tickets</span></a> </li>
-            <li><a href="#"><i class="zmdi zmdi-check"></i><span>Resloved</span></a> </li>
-            <li><a href="#"><i class="zmdi zmdi-archive"></i><span>Archive</span></a> </li>
-          </ul>
-        </div>
-      </div>
     </div>
   </div>
 </aside>
@@ -210,6 +112,11 @@
     <?php 
 			  
 		 switch($pag):
+		 
+		 	case "":
+			
+				include("dashboard.php");
+				break;
 
 			case "account":
 			 include("account.php");
@@ -227,22 +134,24 @@
 				
 		?>
   </div>
-  <footer class="footer-container">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6 col-sm-6">
-          <div class="footer-left"> <a href="http://www.laboratorio-a.it" title="Powered by laboratorio-a" target="new"><img class="img_footer" src="images/logo_lab.svg" alt="laboratorio-a" /></a> </div>
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <div class="footer-right"> <span class="footer-meta"><small>Il logo Shubiri&trade; è un marchio registrato &reg; da Radeesh Servino. &copy; Shubiri 2016 - Tutti i Diritti riservati.</small></span> </div>
-        </div>
+</section>
+<!--Page Container End Here-->
+
+<footer class="footer-container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="footer-left"> <a href="http://www.laboratorio-a.it" title="Powered by laboratorio-a" target="new"><img class="img_footer" src="images/logo_lab.svg" alt="laboratorio-a" /></a> </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="footer-right"> <span class="footer-meta"><small>&copy; Shubiri 2016</small></span> </div>
       </div>
     </div>
-  </footer>
-</section>
-<!--Page Container End Here--> 
+  </div>
+</footer>
+
 <!--Rightbar Start Here-->
-<aside class="rightbar">
+<!--<aside class="rightbar">
   <div class="rightbar-container">
     <div class="aside-chat-box">
       <div class="coversation-toolbar">
@@ -258,12 +167,10 @@
         </div>
         <div class="conversation-action">
           <ul>
-            <li><i class="zmdi zmdi-phone-in-talk"></i></li>
             <li class="dropdown"> <a href="#" class="btn-more dropdown-toggle" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
               <ul class="dropdown-menu">
-                <li><a href="#"><i class="zmdi zmdi-attachment-alt"></i>Attach A File</a></li>
-                <li><a href="#"><i class="zmdi zmdi-mic"></i>Voice</a></li>
-                <li><a href="#"><i class="zmdi zmdi-block"></i>Block User</a></li>
+                <li><a href="#"><i class="zmdi zmdi-attachment-alt"></i>Allega File</a></li>
+                <li><a href="#"><i class="zmdi zmdi-mic"></i>Voce</a></li>
               </ul>
             </li>
           </ul>
@@ -307,19 +214,13 @@
       </div>
     </div>
     <ul class="nav nav-tabs material-tabs rightbar-tab" role="tablist">
-      <li class="active"><a href="#chat" aria-controls="message" role="tab" data-toggle="tab">Chat</a></li>
-      <li><a href="#activities" aria-controls="notifications" role="tab" data-toggle="tab">Activities</a></li>
+      <li class="active"><a href="#chat" aria-controls="message" role="tab" data-toggle="tab">Ticket</a></li>
+      <li><a href="#activities" aria-controls="notifications" role="tab" data-toggle="tab">Attività</a></li>
     </ul>
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane active" id="chat">
-        <div class="chat-user-toolbar clearfix">
-          <div class="chat-user-search pull-left"> <span class="addon-icon"><i class="zmdi zmdi-search"></i></span>
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
-          <div class="add-chat-list pull-right"> <i class="zmdi zmdi-accounts-add"></i> </div>
-        </div>
         <div class="chat-user-container">
-          <h3 class="clearfix"><span class="pull-left">Members</span><span class="pull-right online-counter">3 Online</span></h3>
+          <h3 class="clearfix"><span class="pull-left">Operatori</span><span class="pull-right online-counter">3 Online</span></h3>
           <ul class="chat-user-list">
             <li>
               <div data-trigger="hover" title="Robertoortiz" data-content="<div class='chat-user-info'>
@@ -328,9 +229,8 @@
                                         </div>
                                         <div class='chat-user-details'>
                                         <ul>
-                                        <li>Status: <span>Online</span></li>
-                                        <li>Type: <span>Admin</span></li>
-                                        <li>Last Login: <span>3 hours Ago</span></li>
+                                        <li>Stato: <span>Online</span></li>
+                                        <li>Ruolo: <span>(Ruolo -> Amministratore | Utente)</span></li>
                                         <li></li>
                                         </ul>
                                         </div>
@@ -339,46 +239,28 @@
               <span class="chat-u-status"><i class="fa fa-circle"></i></span> </li>
             <li class="chat-u-online">
               <div data-trigger="hover" title="Kurafire" data-content="<div class='chat-user-info'>
-                                        <div class='chat-user-avatar'>
-                                        <img src='images/avatar/kurafire.jpg' alt='Avatar'>
+                                         <div class='chat-user-avatar'>
+                                        <img src='images/avatar/robertoortiz.jpg' alt='Avatar'>
                                         </div>
                                         <div class='chat-user-details'>
                                         <ul>
-                                        <li>Status: <span>Online</span></li>
-                                        <li>Type: <span>Moderator</span></li>
-                                        <li>Last Login: <span>3 hours Ago</span></li>
+                                        <li>Stato: <span>Online</span></li>
+                                        <li>Ruolo: <span>(Ruolo -> Amministratore | Utente)</span></li>
                                         <li></li>
                                         </ul>
                                         </div>
                                         </div>
                                         " data-placement="left"><span class="chat-avatar"><img src="images/avatar/kurafire.jpg" alt="Avatar"></span><span class="chat-u-info">Kurafire<cite>New York</cite></span> </div>
               <span class="chat-u-status"><i class="fa fa-circle"></i></span> </li>
-            <li class="chat-u-away">
-              <div data-trigger="hover" title="Mikeluby" data-content="<div class='chat-user-info'>
-                                        <div class='chat-user-avatar'>
-                                        <img src='images/avatar/mikeluby.jpg' alt='Avatar'>
-                                        </div>
-                                        <div class='chat-user-details'>
-                                        <ul>
-                                        <li>Status: <span>Online</span></li>
-                                        <li>Type: <span>Moderator</span></li>
-                                        <li>Last Login: <span>3 hours Ago</span></li>
-                                        <li></li>
-                                        </ul>
-                                        </div>
-                                        </div>
-                                        " data-placement="left"> <span class="chat-avatar"><img src="images/avatar/mikeluby.jpg" alt="Avatar"></span><span class="chat-u-info">Bobbyjkane<cite>London City</cite></span> </div>
-              <span class="chat-u-status"><i class="fa fa-circle"></i></span> </li>
             <li class="chat-u-busy">
               <div data-trigger="hover" title="Joostvanderree" data-content="<div class='chat-user-info'>
                                         <div class='chat-user-avatar'>
-                                        <img src='images/avatar/joostvanderree.jpg' alt='Avatar'>
+                                        <img src='images/avatar/robertoortiz.jpg' alt='Avatar'>
                                         </div>
                                         <div class='chat-user-details'>
                                         <ul>
-                                        <li>Status: <span>Online</span></li>
-                                        <li>Type: <span>Moderator</span></li>
-                                        <li>Last Login: <span>3 hours Ago</span></li>
+                                        <li>Stato: <span>Online</span></li>
+                                        <li>Ruolo: <span>(Ruolo -> Amministratore | Utente)</span></li>
                                         <li></li>
                                         </ul>
                                         </div>
@@ -386,95 +268,11 @@
                                         " data-placement="left"> <span class="chat-avatar"><img src="images/avatar/joostvanderree.jpg" alt="Avatar"></span><span class="chat-u-info">Joostvanderree<cite>New York</cite></span> </div>
               <span class="chat-u-status"><i class="fa fa-circle"></i></span> </li>
           </ul>
-          <h3 class="clearfix"><span class="pull-left">Guests</span><span class="pull-right online-counter">1 Online</span></h3>
-          <ul class="chat-user-list">
-            <li>
-              <div data-trigger="hover" title="Kevinthompson" data-content="<div class='chat-user-info'>
-                                        <div class='chat-user-avatar'>
-                                        <img src='images/avatar/Kevinthompson.jpg' alt='Avatar'>
-                                        </div>
-                                        <div class='chat-user-details'>
-                                        <ul>
-                                        <li>Status: <span>Online</span></li>
-                                        <li>Type: <span>Moderator</span></li>
-                                        <li>Last Login: <span>3 hours Ago</span></li>
-                                        <li></li>
-                                        </ul>
-                                        </div>
-                                        </div>
-                                        " data-placement="left"> <span class="chat-avatar"><img src="images/avatar/kevinthompson.jpg" alt="Avatar"></span><span class="chat-u-info">Kevinthompson<cite>Scotland</cite></span> </div>
-              <span class="chat-u-status"><i class="fa fa-circle"></i></span> </li>
-            <li class="chat-u-online">
-              <div data-trigger="hover" title="Mds" data-content="<div class='chat-user-info'>
-                                        <div class='chat-user-avatar'>
-                                        <img src='images/avatar/mds.jpg' alt='Avatar'>
-                                        </div>
-                                        <div class='chat-user-details'>
-                                        <ul>
-                                        <li>Status: <span>Online</span></li>
-                                        <li>Type: <span>Moderator</span></li>
-
-                                        <li>Last Login: <span>3 hours Ago</span></li>
-                                        <li></li>
-                                        </ul>
-                                        </div>
-                                        </div>
-                                        " data-placement="left"> <span class="chat-avatar"><img src="images/avatar/mds.jpg" alt="Avatar"></span><span class="chat-u-info">Mds<cite>South West, England</cite></span> </div>
-              <span class="chat-u-status"><i class="fa fa-circle"></i></span> </li>
-            <li>
-              <div data-trigger="hover" title="Mko" data-content="<div class='chat-user-info'>
-                                        <div class='chat-user-avatar'>
-                                        <img src='images/avatar/mko.jpg' alt='Avatar'>
-                                        </div>
-                                        <div class='chat-user-details'>
-                                        <ul>
-                                        <li>Status: <span>Online</span></li>
-                                        <li>Type: <span>Moderator</span></li>
-                                        <li>Last Login: <span>3 hours Ago</span></li>
-                                        <li></li>
-                                        </ul>
-                                        </div>
-                                        </div>
-                                        " data-placement="left"> <span class="chat-avatar"><img src="images/avatar/mko.jpg" alt="Avatar"></span><span class="chat-u-info">Mko<cite>New York</cite></span> </div>
-              <span class="chat-u-status"><i class="fa fa-circle"></i></span> </li>
-            <li>
-              <div data-trigger="hover" title="Coreyweb" data-content="<div class='chat-user-info'>
-                                        <div class='chat-user-avatar'>
-                                        <img src='images/avatar/coreyweb.jpg' alt='Avatar'>
-                                        </div>
-                                        <div class='chat-user-details'>
-                                        <ul>
-                                        <li>Status: <span>Online</span></li>
-                                        <li>Type: <span>Moderator</span></li>
-                                        <li>Last Login: <span>3 hours Ago</span></li>
-                                        <li></li>
-                                        </ul>
-                                        </div>
-                                        </div>
-                                        " data-placement="left"> <span class="chat-avatar"><img src="images/avatar/coreyweb.jpg" alt="Avatar"></span><span class="chat-u-info">Coreyweb<cite>Northern Ireland</cite></span> </div>
-              <span class="chat-u-status"><i class="fa fa-circle"></i></span> </li>
-            <li>
-              <div data-trigger="hover" title="Amarkdalen" data-content="<div class='chat-user-info'>
-                                        <div class='chat-user-avatar'>
-                                        <img src='images/avatar/amarkdalen.jpg' alt='Avatar'>
-                                        </div>
-                                        <div class='chat-user-details'>
-                                        <ul>
-                                        <li>Status: <span>Online</span></li>
-                                        <li>Type: <span>Moderator</span></li>
-                                        <li>Last Login: <span>3 hours Ago</span></li>
-                                        <li></li>
-                                        </ul>
-                                        </div>
-                                        </div>
-                                        " data-placement="left"> <span class="chat-avatar"><img src="images/avatar/amarkdalen.jpg" alt="Avatar"></span><span class="chat-u-info">Oykun<cite>New York</cite></span> </div>
-              <span class="chat-u-status"><i class="fa fa-circle"></i></span> </li>
-          </ul>
         </div>
       </div>
       <div role="tabpanel" class="tab-pane" id="activities">
         <div class="activities-timeline">
-          <h3 class="tab-pane-header">Recent Activities</h3>
+          <h3 class="tab-pane-header">Attività Recenti</h3>
           <ul class="activities-list">
             <li>
               <div class="activities-badge"> <span class="w_bg_amber"><i class="zmdi zmdi-ticket-star"></i></span> </div>
@@ -569,7 +367,7 @@
     </div>
   </div>
 </aside>
-<!-- MODAL FORM AGGIORNAMENTO -->
+--><!-- MODAL FORM AGGIORNAMENTO -->
 <aside>
   <div class="dialogWindowMod">
     <div class="modal-dialog"> </div>
@@ -753,7 +551,7 @@ $(document).ready(function(e) {
 		   showClose: true,
 		   autoReplace: true,
 		   browseOnZoneClick: true,
-		   allowedFileTypes: ['image', 'video'],
+		   allowedFileTypes: ['image'],
 		   allowedFileExtensions: ['jpg', 'gif', 'png'],
 		   language: "it"
 		   

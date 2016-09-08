@@ -18,6 +18,7 @@
     <link type="text/css" rel="stylesheet" href="css/common.css">
     <link type="text/css" rel="stylesheet" href="css/responsive.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/style_custom.css">
 </head>
 <body class="login-page">
 <!--Page Container Start Here-->
@@ -114,7 +115,7 @@
         <div class="row">
             <div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
                 <div class="footer-content">
-                    <span class="footer-meta"><small>Il logo Shubiri&trade; è un marchio registrato &reg; da Radeesh Servino.<br />&copy; Shubiri 2016 - Tutti i Diritti riservati.</small></span>
+                    <span class="footer-meta"><small>Il logo Shubiri&trade; ed il logo laboratorio-a&trade; sono marchi registrati &reg; da Radeesh Servino e laboratorio-a S.r.l.<br />&copy; Shubiri 2016 - Tutti i Diritti riservati.</small></span>
                 </div>
             </div>
         </div>

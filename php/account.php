@@ -2,13 +2,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2>Accounts</h2>
-      <p>Crea nuovo amministratore</p>
+      <p>Gestione profili utenti</p>
     </div>
     <div class="col-md-6">
       <ul class="list-page-breadcrumb">
-        <li><a href="index.php?pag=account">Account<i class="zmdi"></i></a></li>
-        <!--<li><a href="#">Layout <i class="zmdi zmdi-chevron-right"></i></a></li>
-                <li class="active-page"> Tabby Leftbar</li> -->
+        <li> <a href="index.php" title="Home">Home<i class="zmdi"></i></a> | <a href="index.php?pag=account" title="Accounts"><i class="zmdi"></i>Account</a></li>
       </ul>
     </div>
   </div>
@@ -18,14 +16,14 @@
     <div class="widget-wrap">
       <div class="widget-header block-header margin-bottom-0 clearfix">
         <div class="pull-left">
-          <h3>Aggiungi amministratore</h3>
-          <p>Crea nuovo user, password e gestisci permessi</p>
+          <h3>Aggiungi profilo</h3>
+          <p>Creazione nuovo utente e gestione permessi</p>
         </div>
         <div class="pull-right w-action">
           <ul class="widget-action-bar">
             <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="zmdi zmdi-more"></i></a>
               <ul class="dropdown-menu">
-                <li class="widget-reload"><a href="#"><i class="zmdi "></i></a></li>
+                <li class="widget-reload"><a href="#"><i class="zmdi zmdi-refresh"></i></a></li>
                 <li class="widget-toggle"><a href="#"><i class="zmdi zmdi-chevron-down"></i></a></li>
                 <li class="widget-fullscreen"><a href="#"><i class="zmdi zmdi-fullscreen"></i></a></li>
                 <li class="widget-exit"><a href="#"><i class="zmdi zmdi-power"></i></a></li>
@@ -46,32 +44,35 @@
                 <!-- start text password -->
                 <div class="row">
                   <div class="col-md-4 unit">
-                    <label class="label">USER</label>
+                    <label class="label">Nome utente</label>
                     <div class="input">
                       <label class="icon-left" for="text"> <i class="fa fa-user"></i> </label>
-                      <input class="form-control" name="username2" type="text" placeholder="USERNAME" id="text" required>
+                      <input class="form-control" name="username2" type="text" placeholder="Inserire il nome utente" id="text" required>
                     </div>
                   </div>
                   <div class="col-md-4 unit">
-                    <label class="label">PASSWORD</label>
+                    <label class="label">Password</label>
                     <div class="input">
                       <label class="icon-left" for="password"> <i class="fa fa-lock"></i> </label>
-                      <input class="form-control" name="password2" type="password" placeholder="PASSWORD" id="password" required>
+                      <input class="form-control" name="password2" type="password" placeholder="Inserire la password" id="password" required>
                     </div>
                   </div>
                   <div class="col-md-4 unit">
-                    <label class="label">Livello di gestione</label>
+                    <label class="label">Livello utente</label>
                     <div class="input">
                       <label class="icon-left" for="text"> <i class="fa fa-terminal"></i> </label>
-                      <input required name="livello" class="form-control" type="number" value="<?php $liv = $_SESSION["accesso"] +1;  echo $liv; ?>" min="<?php echo $liv; ?>" id="livello">
+                      <input required name="livello" class="form-control" type="number" value="<?php $liv = $_SESSION["accesso"] +1;  echo $liv; ?>" min="<?php echo $liv; ?>" max="3" id="livello">
                     </div>
+                    <p><small><span class="legenda">2 - Amministratore</span><span class="legenda">3 - Utente</span></small></p>
                   </div>
                   <div style="clear:both;"></div>
-                  <div class="col-md-4 col-sm-4">
+                  <div class="col-md-2 col-sm-2">
                     <div class="btn-ex-container">
-                      <button class="btn btn-primary" type="submit">Aggiungi Amministratore</button>
+                      <button class="btn btn-primary" type="submit">Crea profilo</button>
+                      <button class="btn" type="reset">Annulla</button>
                     </div>
                   </div>
+                   
                 </div>
                 <!-- end text password -->
                </div>
@@ -89,8 +90,8 @@
   <div class="col-md-12">
     <div class="widget-wrap">
       <div class="widget-header block-header clearfix">
-        <h3>Lista utenti admin</h3>
-        <p>Gestisci gli utenti</p>
+        <h3>Utenti registrati</h3>
+        <p>Gestione profili attivi</p>
       </div>
       <div class="widget-container">
         <div class="widget-content">
@@ -98,9 +99,9 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>Username</th>
-                  <th>Livelli di Accesso</th>
-                  <th class="td-center">Action</th>
+                  <th>Nome utente</th>
+                  <th>Livelli di accesso</th>
+                  <th class="td-center">Azioni</th>
                 </tr>
               </thead>
               <tbody class="insertContentQuery">
@@ -113,10 +114,22 @@
                    	 if( $rowAccount["admin_accesso"] == 1 ):
                    
                      else:
+					 
+					 	if( $rowAccount["admin_accesso"] == 2 ) {
+							
+							$livello = "Amministratore";
+							$livelloContainer = "bg".$livello;
+							
+						} elseif( $rowAccount["admin_accesso"] == 3 ) {
+							
+							$livello = "Utente";
+							$livelloContainer = "bg".$livello;
+							
+						}
                  ?>
                  <tr>
                   <td><?php echo $rowAccount["admin_user"];  ?></td>
-                  <td><label class="label label-info"><?php echo $rowAccount["admin_accesso"];  ?></label></td>
+                  <td><label class="label label-info <?php echo $livelloContainer; ?>"><?php echo $livello;  ?></label></td>
                   <td class="td-center">
                    <div class="btn-toolbar" role="toolbar">
                   	<div class="btn-group" role="group"> 

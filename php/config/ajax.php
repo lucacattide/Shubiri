@@ -19,9 +19,9 @@
    /* SET QUERY */
    $sqlAccount = "INSERT INTO `admin`(`admin_id`, `admin_user`, `admin_password`, `admin_accesso`, `admin_data_creazione`) VALUES (NULL,'".$mysqli->real_escape_string($_POST["username2"])."','".$mysqli->real_escape_string($_POST["password2"])."','".$livello."','".date("Y-m-d H:i:s")."' )";  
    if($mysqli->query($sqlAccount)): 
-	  echo "UTENTE SALVATO CORRETTAMENTE";
+	  echo "Utente creato";
 	else:
-	  echo "ERRORE: RIPROVA";   
+	  echo "Errore! Riprova";   
     endif;  	 
   endif;
   /* END CREA AMMINISTRATORE DB BACKEND ***************/
@@ -37,9 +37,9 @@
    /* SET QUERY */
    $sqlAccount = "UPDATE `admin` SET `admin_accesso`='".$livello."' WHERE `admin_id` = $id ";  
    if($mysqli->query($sqlAccount)): 
-	  echo "MODIFICHE SALVATE";
+	  echo "Modifiche salvate";
 	else:
-	  echo "ERRORE: RIPROVA";   
+	  echo "Errore! Riprova";      
     endif;  	 
   endif;
   /* END MODIFICA AMMINISTRATORE DB BACKEND ***************/
@@ -49,9 +49,9 @@
 	$id = $_POST["admin_id"];
 	$sqlElAccount = "DELETE FROM `admin` WHERE admin_id = $id";
 	if($mysqli->query($sqlElAccount)): 
-	  echo "Account Eliminato!"; 
+	  echo "Account eliminato"; 
 	else:
-	  echo "ERRORE: RIPROVA";   
+	 echo "Errore! Riprova";   
     endif; 
   endif;
   /* END ELIMINA AMMINISTRATORE DB BACKEND ***************/
@@ -65,9 +65,9 @@
   if(isset($_POST["nuovaPagina"])):
 	$sqlPagina = "INSERT INTO `pagina`(`pagina_id`, `pagina_url`, `pagina_riferimento`, `pagina_meta_title`, `pagina_meta_description`, `pagina_meta_tag`, `pagina_immagine_id`, `pagina_gallery_id`, `pagina_lingua`, `pagina_data_creazione`, `pagina_data_modifica`, `pagina_dipendenza_id`, `pagina_ordinamento`, `pagina_categoria_id`) VALUES (NULL,'".$mysqli->real_escape_string($_POST["pagina_url"])."','".$mysqli->real_escape_string($_POST["pagina_riferimento"])."','".$mysqli->real_escape_string($_POST["pagina_meta_title"])."','".$mysqli->real_escape_string($_POST["pagina_meta_description"])."','".$mysqli->real_escape_string($_POST["pagina_meta_tag"])."','','','','".date("Y-m-d H:i:s")."','".date("Y-m-d H:i:s")."','".$mysqli->real_escape_string($_POST["pagina_dipendenza_id"])."','0','0')";
 	if($mysqli->query($sqlPagina)): 
-	  echo "Pagina Creata!"; 
+	  echo "Pagina creata"; 
 	else:
-	  echo "ERRORE: RIPROVA";   
+	  echo "Errore! Riprova";   
 	endif; 
   endif;
   /* END AGGIUNGI NUOVA PAGINA DB BACKEND ***************/
@@ -76,9 +76,9 @@
   if(isset($_POST["modificaPagina"])):
     $sqlPagina = "UPDATE `pagina` SET `pagina_url`='".$mysqli->real_escape_string($_POST["pagina_url"])."',`pagina_riferimento`='".$mysqli->real_escape_string($_POST["pagina_riferimento"])."',`pagina_meta_title`='".$mysqli->real_escape_string($_POST["pagina_meta_title"])."',`pagina_meta_description`='".$mysqli->real_escape_string($_POST["pagina_meta_description"])."',`pagina_meta_tag`='".$mysqli->real_escape_string($_POST["pagina_meta_tag"])."',`pagina_data_modifica`='".date("Y-m-d H:i:s")."',`pagina_dipendenza_id`='".$mysqli->real_escape_string($_POST["pagina_dipendenza_id"])."' WHERE `pagina_id` = '".$mysqli->real_escape_string($_POST["pagina_id"])."' ";
 	if($mysqli->query($sqlPagina)): 
-	  echo "Pagina Modificata!"; 
+	  echo "Pagina modificata"; 
 	else:
-	  echo "ERRORE: RIPROVA";   
+	  echo "Errore! Riprova";     
 	endif; 
   endif;
   /* END MODIFICA PAGINA DB BACKEND ***************/ 
@@ -88,9 +88,9 @@
   if(isset($_POST["eliminPagina"])):
     $sqlPagina = "DELETE FROM `pagina` WHERE `pagina_id` = '".$mysqli->real_escape_string($_POST["pagina_id"])."' ";
 	if($mysqli->query($sqlPagina)): 
-	  echo "Pagina Eliminata!"; 
+	  echo "Pagina eliminata"; 
 	else:
-	  echo "ERRORE: RIPROVA";   
+	 echo "Errore! Riprova";   
 	endif; 
   endif;
   /* END ELIMINA PAGINA DB BACKEND ***************/ 

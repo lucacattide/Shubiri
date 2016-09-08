@@ -35,19 +35,23 @@ if($pag == "account"):
                                 <!-- start text password -->
                                 <div class="row">
                                   <div class="col-md-4 unit">
-                                    <label class="label">Livello di gestione</label>
+                                    <label class="label">Livello utente</label>
                                     <div class="input">
                                       <label class="icon-left" for="text"> <i class="fa fa-terminal"></i> </label>
                                       <input required name="livello" class="form-control" type="number" value="<?php echo $rowAccount["admin_accesso"];  ?>" min="<?php echo $rowAccount["admin_accesso"];  ?>" id="livello">
                                     </div>
+                                    <p><small><span class="legenda">2 - Amministratore</span><span class="legenda">3 - Utente</span></small></p>
                                   </div>
                                   <div style="clear:both;"></div>
                                   <div class="col-md-4 col-sm-4">
                                     <div class="btn-ex-container">
-                                      <button class="btn btn-primary" type="submit">Modifica Dati Amministratore</button>
+                                      <button class="btn btn-primary" type="submit">Modifica dati</button>
+                                      <button class="btn" data-dismiss="modal">Chiudi</button>
                                     </div>
                                   </div>
                                 </div>
+                                </div>
+                                
                                 <!-- end text password -->
                                </div>
                            </form> 
@@ -89,7 +93,7 @@ if($pag == "pagina"):
             <div class="row">
               <!-- URL PAGINA -->
               <div class="col-md-6 unit">
-                <label class="label">URL PAGINA</label>
+                <label class="label">URL SEF</label>
                 <div class="input">
                   <label class="icon-left" for="text"> <i class="zmdi zmdi-globe"></i> </label>
                   <input  name="pagina_url" class="form-control" type="text" placeholder="nome-url-pagina" value="<?php echo $rowPagina["pagina_url"]; ?>" >
@@ -99,7 +103,7 @@ if($pag == "pagina"):
               
               <!-- URL PAGINA -->
               <div class="col-md-6 unit">
-                <label class="label">Nome File (file.php)</label>
+                <label class="label">Nome file</label>
                 <div class="input">
                   <label class="icon-left" for="text"> <i class="fa fa-terminal"></i> </label>
                   <input name="pagina_riferimento" class="form-control" type="text" placeholder="pagina.php" value="<?php echo $rowPagina["pagina_riferimento"]; ?>">
@@ -111,7 +115,7 @@ if($pag == "pagina"):
             <div class="row">
              <div class="col-md-6 unit">
                <div class="unit">
-                <label class="label">Titolo SEO</label>
+                <label class="label">Titolo</label>
                 <div class="input">
                     <label for="text" class="icon-left">
                         <i class="fa fa-edit"></i>
@@ -120,12 +124,12 @@ if($pag == "pagina"):
                 </div>
                </div>
                <div class="unit">
-                <label class="label">Meta Tags Seo</label>
+                <label class="label">Parole chiave</label>
                     <input name="pagina_meta_tag" type="text" class="tags tags-input" data-type="tags" value="<?php echo $rowPagina["pagina_meta_tag"]; ?>"/>
                </div>
              </div>    
              <div class="col-md-6 unit">
-              <label class="label">Descrizione Seo</label>
+              <label class="label">Descrizione</label>
                 <div class="input">
                   <label for="textarea" class="icon-left">
                       <i class="fa fa-file-text-o"></i>
@@ -138,7 +142,7 @@ if($pag == "pagina"):
               
                   <label class="input select">
                       <select name="pagina_dipendenza_id" class="form-control">
-                          <option value="0">pagina primaria</option>
+                          <option value="0">Pagina primaria</option>
                           <?php 
 						    $sqlPagina2 = "SELECT * FROM `pagina`"; 
   							$rPagina2 = $mysqli->query($sqlPagina2);
@@ -170,9 +174,11 @@ if($pag == "pagina"):
               <div style="clear:both;"></div>
               <div class="col-md-4 col-sm-4">
                 <div class="btn-ex-container">
-                  <button class="btn btn-primary" type="submit">Modifica Pagina</button>
+                  <button class="btn btn-primary" type="submit">Modifica pagina</button>
+                  <button class="btn" data-dismiss="modal">Chiudi</button>
                 </div>
               </div>
+             
             </div>
             
           
