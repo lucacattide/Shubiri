@@ -23,4 +23,15 @@ if($pag == "pagina"):
 
 endif;
 
+if( $pag == "crea-pagina" ):
+
+   $sqlArticolo = "SELECT * FROM `articolo` WHERE `articolo_pagina_id` = '".$_GET["id"]."' ";
+   
+   $rArticolo = $mysqli->query($sqlArticolo);
+   
+   $countArticolo =  $rArticolo->num_rows;
+   
+endif;
+
+
 ?>

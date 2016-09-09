@@ -46,7 +46,8 @@ if($pag == "account"):
                                   <div class="col-md-4 col-sm-4">
                                     <div class="btn-ex-container">
                                       <button class="btn btn-primary" type="submit">Modifica dati</button>
-                                      <button class="btn" data-dismiss="modal">Chiudi</button>
+                                      <i class="zmdi"></i>
+                                      <button class="chiudi btn bootbox-close-button" data-dismiss="modal" type="button">Chiudi</button>
                                     </div>
                                   </div>
                                 </div>
@@ -175,7 +176,8 @@ if($pag == "pagina"):
               <div class="col-md-4 col-sm-4">
                 <div class="btn-ex-container">
                   <button class="btn btn-primary" type="submit">Modifica pagina</button>
-                  <button class="btn" data-dismiss="modal">Chiudi</button>
+                  <i class="zmdi"></i>
+                  <button class="btn bootbox-close-button chiudi" data-dismiss="modal">Chiudi</button>
                 </div>
               </div>
              

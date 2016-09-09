@@ -110,6 +110,7 @@ if($pag == "pagina"):
               <div class="col-md-4 col-sm-4">
                 <div class="btn-ex-container">
                   <button class="btn btn-primary" type="submit">Aggiungi Pagina</button>
+                  <i class="zmdi"></i>
                   <button class="btn" type="reset">Annulla</button>
                 </div>
               </div>
@@ -127,5 +128,109 @@ if($pag == "pagina"):
 <?php 
  endwhile;
 endif; 	
-/* END PAGE *****************************************************/		   
-?> 
+/* END PAGE *****************************************************/		 /* ARTICOLO *****************************************************/	
+if($pag == "crea-pagina"): 
+?>
+<div class="modal-content">
+  <div class="modal-header">
+    <button aria-hidden="true" data-dismiss="modal" class="bootbox-close-button close" type="button">×</button>
+    <h4 class="modal-title">Aggiungi Articolo</h4>
+  </div>
+  <div class="modal-body">
+    <div class="bootbox-body">
+      <div class="col-md-12">
+        <form class="j-forms formElement"  method="post" enctype="multipart/form-data" novalidate>
+          <input type="hidden" name="nuovoArticolo" />
+          <input type="hidden" name="articolo_pagina_id" value="<?php echo $id; ?>" />
+          <div class="form-content"> 
+            
+            <!-- start text password -->
+            <div class="row col-md-6">
+              <div class="col-md-12 unit">
+                <label class="label">Titolo</label>
+                <div class="input">
+                  <label for="text" class="icon-left"> <i class="fa fa-edit"></i> </label>
+                  <textarea name="articolo_titolo"  spellcheck="false" placeholder="Inserire il titolo" class="form-control"></textarea>
+                </div>
+              </div>
+              <div class="col-md-12 unit">
+                <label class="label">Sottotitolo</label>
+                <div class="input">
+                  <label for="password" class="icon-left"> <i class="fa fa-edit"></i> </label>
+                  <textarea name="articolo_sottotitolo"  spellcheck="false" placeholder="Inserire il sottotitolo" class="form-control"></textarea>
+                </div>
+              </div>
+            </div>
+            <!-- end text password --> 
+            
+            <!-- start email url -->
+            <div class="row col-md-6">
+              <div class="col-md-12 unit">
+                <label class="label">URL SEF</label>
+                <div class="input">
+                  <label for="url" class="icon-left"> <i class="fa fa-globe"></i> </label>
+                  <input name="articolo_url" type="text" placeholder="Inserire l'URL" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-12 unit">
+                <label class="label">Testo</label>
+                <div class="input">
+                  <label for="password" class="icon-left"> <i class="fa fa-edit"></i> </label>
+                  <textarea name="articolo_testo"  spellcheck="false" placeholder="Inserire il testo" class="form-control"></textarea>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="col-md-4">
+                  <label class="radio">
+                    <input type="radio" name="articolo_visibile" value="1">
+                    <i></i>Pubblica</label>
+                </div>
+                <div class="col-md-4">
+                  <label class="radio">
+                    <input type="radio" checked="" name="articolo_visibile" value="2">
+                    <i></i>Bozza</label>
+                </div>
+                <div class="col-md-4">
+                  <label class="radio">
+                    <input type="radio" name="articolo_visibile" value="3">
+                    <i></i>Archivia</label>
+                </div>
+              </div>
+            </div>
+            <!-- end email url -->
+            
+            <div class="row col-md-12">
+                   <div class="Gal col-md-12 unit">
+                     <form action="../../upload.php" class="dropzone" id="my-awesome-dropzone">
+                      <input type="hidden" name="param" value="1" />
+                        <div class="fallback">
+                         <input name="file" type="file" multiple>
+                        </div>
+                        <div class="dz-message">
+                          <h3>Trascina le immagini oppure clicca qui per selezionarle</h3>
+                          <h4>FILE MAX SIZE: 1 MB | Larghezza:1280px | Altezza: 720px | FORMATI: JPG, PNG, GIFF </h4>
+                         <!-- <p class="lead">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</p> -->
+                        </div>
+                     </form>
+                  </div>
+             </div>
+           
+            <div class="row">
+              <div style="clear:both;"></div>
+              <div class="col-md-4 col-sm-4">
+                <div class="btn-ex-container">
+                  <button class="btn btn-primary" type="submit">Aggiungi Articolo</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </div>
+</div>
+<?php 
+endif;
+/* END ARTICOLO *****************************************************/		   
+?>

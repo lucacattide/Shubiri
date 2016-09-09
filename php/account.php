@@ -61,7 +61,7 @@
                     <label class="label">Livello utente</label>
                     <div class="input">
                       <label class="icon-left" for="text"> <i class="fa fa-terminal"></i> </label>
-                      <input required name="livello" class="form-control" type="number" value="<?php $liv = $_SESSION["accesso"] +1;  echo $liv; ?>" min="<?php echo $liv; ?>" max="3" id="livello">
+                      <input required name="livello" class="form-control" type="number" value="<?php $liv = $_SESSION["accesso"] +1;  echo $liv; ?>" min="<?php echo $liv; ?>"  id="livello">
                     </div>
                     <p><small><span class="legenda">2 - Amministratore</span><span class="legenda">3 - Utente</span></small></p>
                   </div>
@@ -69,6 +69,7 @@
                   <div class="col-md-2 col-sm-2">
                     <div class="btn-ex-container">
                       <button class="btn btn-primary" type="submit">Crea profilo</button>
+                      <i class="zmdi"></i>
                       <button class="btn" type="reset">Annulla</button>
                     </div>
                   </div>
@@ -115,17 +116,17 @@
                    
                      else:
 					 
-					 	if( $rowAccount["admin_accesso"] == 2 ) {
-							
+					 	if( $rowAccount["admin_accesso"] == 2 ):
+					
 							$livello = "Amministratore";
 							$livelloContainer = "bg".$livello;
 							
-						} elseif( $rowAccount["admin_accesso"] == 3 ) {
+						elseif( $rowAccount["admin_accesso"] == 3 ):
 							
-							$livello = "Utente";
-							$livelloContainer = "bg".$livello;
-							
-						}
+								$livello = "Utente";
+								$livelloContainer = "bg".$livello;
+												
+						endif;
                  ?>
                  <tr>
                   <td><?php echo $rowAccount["admin_user"];  ?></td>

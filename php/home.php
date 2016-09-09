@@ -18,7 +18,10 @@
 <link type="text/css" rel="stylesheet" href="css/bootstrap-extend.css">
 <link type="text/css" rel="stylesheet" href="css/common.css">
 <link type="text/css" rel="stylesheet" href="css/responsive.css">
-<link href="css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="css/basic.css">
+    <link type="text/css" rel="stylesheet" href="css/basic.min.css">
+    <link type="text/css" rel="stylesheet" href="css/dropzone.css">
+    <link type="text/css" rel="stylesheet" href="css/dropzone.min.css">
 <link type="text/css" rel="stylesheet" href="css/style.css">
 <link type="text/css" rel="stylesheet" href="css/style_custom.css">
 <link rel="icon" type="image/png" href="favicon.png" />
@@ -27,7 +30,7 @@
 <!--Topbar Start Here-->
 <header class="topbar clearfix"> 
   <!--Top Search Bar Start Here-->
-  <div class="top-search-bar">
+<!--  <div class="top-search-bar">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
@@ -37,7 +40,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
   <!--Top Search Bar End Here--> 
   <!--Topbar Left Branding With Logo Start-->
   <div class="topbar-left pull-left">
@@ -63,7 +66,7 @@
         <li><span class="left-toggle-switch"><i class="zmdi zmdi-menu"></i></span></li>
       </ul>
       <ul class="pull-right top-right-icons">
-        <li><a href="#" class="btn-top-search" title="Cerca"><i class="zmdi zmdi-search"></i></a></li>
+       <!-- <li><a href="#" class="btn-top-search" title="Cerca"><i class="zmdi zmdi-search"></i></a></li>-->
        <!-- <li><a href="#" class="right-toggle-switch" title="Assistenza"><i class="zmdi zmdi-format-align-left"></i><span class="more-noty"></span></a></li>-->
       </ul>
     </div>
@@ -115,7 +118,7 @@
 		 
 		 	case "":
 			
-				include("dashboard.php");
+				include("pagina.php");
 				break;
 
 			case "account":
@@ -407,23 +410,22 @@
 <script src="js/lib/j-forms.js"></script> 
 <script src="js/lib/jquery.loadmask.js"></script> 
 <script src="js/apps.js"></script> 
+<script src="js/lib/dropzone-amd-module.js"></script>
+<script src="js/lib/dropzone.js"></script>
+<script src="js/lib/jquery.sortable.min.js" type="text/javascript"></script>
 
-<!--Plugin riordino--> 
-<script src="js/lib/sortable.min.js" type="text/javascript"></script> 
-<script src="js/lib/fileinput.min.js" type="text/javascript"></script> 
-<script src="js/lib/it.js" type="text/javascript"></script> 
 
 <!--AJAX--> 
 <script type="text/javascript">
 
-
-
-
-
-
-	
 /* DOCUMENT READY */
 $(document).ready(function(e) {
+	
+	
+	 
+
+	  $(".Gal2").dropzone({ url: "upload2.php"});
+	  
     
 
 	  /* VARIABILE PASSAGGIO VALORI FORM DI MODIFICA */
@@ -435,9 +437,10 @@ $(document).ready(function(e) {
 			 $.post("php/config/forms_modifica.php", { pag: "<?php echo $pag; ?>", id:ID  }, function(data){
 			  $(".dialogWindowMod .modal-dialog").empty();	
 			  $(".dialogWindowMod .modal-dialog").html(data);
-			  $(".dialogWindowMod .modal-header .bootbox-close-button").on("click", function(){
+			  $(".dialogWindowMod .modal-header .bootbox-close-button, chiudi").on("click", function(){
 				  $(".dialogWindowMod").fadeOut(1000);
 				  $(".dialogWindowMod").removeClass("mWidth"); 
+				  
 			  });
 			     /**
 				   * Tags Input
@@ -478,13 +481,17 @@ $(document).ready(function(e) {
 	  $(document).on("click", 'a.aggiungi', function(e){
 			 e.preventDefault();
 			 $(".dialogWindowMod .modal-dialog").addClass("mWidth"); 
-			 $.post("php/config/forms_aggiungi.php", { pag: "<?php echo $pag; ?>"}, function(data){
+			 $.post("php/config/forms_aggiungi.php", { pag: "<?php echo $pag; ?>", id: "<?php if(empty($_GET["id"])):  else: echo $_GET["id"]; endif; ?>" }, function(data){
 			  $(".dialogWindowMod .modal-dialog").empty();	
 			  $(".dialogWindowMod .modal-dialog").html(data);
+			  $(".Gal").dropzone({ url: "upload.php" });
 			  $(".dialogWindowMod .modal-header .bootbox-close-button").on("click", function(){
 				  $(".dialogWindowMod").fadeOut(1000);
 				  $(".dialogWindowMod").removeClass("mWidth"); 
 			  });
+		
+			  
+			     
 			     /**
 				   * Tags Input
 				   * jquery.tagsinput.js
@@ -517,7 +524,7 @@ $(document).ready(function(e) {
 					 
 	  });
 
-	  
+	  // SUBMIT FORM
 	  $(document).on("submit", '.formElement', function(e) {
 			e.preventDefault(); 
 			// $(".dialogWindowMod").fadeOut(1000);
@@ -542,25 +549,33 @@ $(document).ready(function(e) {
 		   });
 	   }); 
 	   
+	   //SORTABLE TAB
+	   $('.thumbnail-sortable').sortable({
+           placeholderClass: 'col-md-12 margin-auto-sortable',
+       });
 	   
-	   // Inizializzazione File Upload
 	   
-	   $("#carica_file").fileinput({
-		   
-		   previewFileType:'any',
-		   showClose: true,
-		   autoReplace: true,
-		   browseOnZoneClick: true,
-		   allowedFileTypes: ['image'],
-		   allowedFileExtensions: ['jpg', 'gif', 'png'],
-		   language: "it"
-		   
+	   // ELIMINA IMMAGINE
+	   $(document).on("submit", '.formElementDimg', function(e){
+	        e.preventDefault(); 
+			var data = new FormData(this); 
+			$.ajax({
+				url: 'php/config/ajax.php',
+				data: data,
+				cache: false,
+				contentType: false,
+				processData: false,
+				dataType: "html",
+				type: 'POST',
+				success: function(data) {
+				  bootbox.alert(""+data+"", function () {});
+				}
+		   });
+		
 	   });
-	   
+	      
   });	
  
-
-
 
 </script>
 </body>

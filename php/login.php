@@ -78,13 +78,13 @@
 
 
             <!-- start keep logged -->
-            <div class="unit">
+          <!--  <div class="unit">
                 <label class="checkbox">
                     <input type="checkbox" name="logged" value="false" checked="">
                     <i></i>
                     Ricordami
                 </label>
-            </div>
+            </div>-->
             <!-- end keep logged -->
 
             <!-- start response from server -->

@@ -45,6 +45,12 @@
 
 body { background-color: #ccc; }
 
+/* Header */
+
+.topbar { background-color: #f6f6f6; }
+
+.page-header.light { background-color: #f6f6f6; }
+
 /* Login */
 
 .login-page { background-image: none; }
@@ -140,6 +146,8 @@ body { background-color: #ccc; }
 
 .topbar .topbar-left .left-toggle-switch { color: #1D71B8; }
 
+.leftbar.material-leftbar { background-color: #f6f6f6; }
+
 .leftbar.material-leftbar .user-profile-container { background: none; }
 
 .leftbar.material-leftbar .user-profile-container .admin-bar ul li a { color: #1D71B8; }
@@ -174,13 +182,23 @@ body { background-color: #ccc; }
 
 .bgUtente { background-color: #1D71B8 !important; }
 
-.legenda:first-child { color:#662483; margin-right: 2%;}
-.legenda:last-child { color:#1D71B8; }
+.legenda:first-child
+{
+	color: #662483;
+	margin-right: 2%;
+}
+
+.legenda:last-child { color: #1D71B8; }
 
 /* Tags */ 
 
-div.tagsinput span.tag { background: #1D71B8; color: #fff;}
-div.tagsinput span.tag a { color: #fff;}
+div.tagsinput span.tag
+{
+	background: #1D71B8;
+	color: #fff;
+}
+
+div.tagsinput span.tag a { color: #fff; }
 
 /* Links */
 
@@ -221,7 +239,7 @@ a:hover, a:focus
 
 /* Form */
 
-.j-forms input:focus, .j-forms textarea:focus { border-color: #662483; }
+.j-forms input:focus, .j-forms textarea:focus, .j-forms select:focus { border-color: #662483; }
 
 .j-forms .checkbox input + i { color: #1D71B8; }
 
@@ -239,9 +257,12 @@ a:hover, a:focus
 
 .j-forms .success-view input { background: #662483; }
 
-.j-forms .radio input:checked + i, .j-forms .checkbox input:checked + i {color: #662483;}
-.j-forms .radio input:checked + i, .j-forms .checkbox input:checked + i, .j-forms .radio-toggle input:checked + i, .j-forms .checkbox-toggle input:checked + i {    border: 2px solid #662483;}
-.j-forms .radio i:after {background-color: #662483;}
+.j-forms .radio input:checked + i, .j-forms .checkbox input:checked + i { color: #662483; }
+
+.j-forms .radio input:checked + i, .j-forms .checkbox input:checked + i, .j-forms .radio-toggle input:checked + i, .j-forms .checkbox-toggle input:checked + i { border: 2px solid #662483; }
+
+.j-forms .radio i:after { background-color: #662483; }
+
 /* Footer */
 
 .footer-container
@@ -251,6 +272,7 @@ a:hover, a:focus
 	top: auto;
 	left: 0;
 	right: 0;
+	background-color: #f6f6f6;
 }
 
 .img_footer

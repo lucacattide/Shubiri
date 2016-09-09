@@ -15,17 +15,17 @@
         	if( $rowAccount["admin_accesso"] == 1 ):
             else:
 			
-				if( $rowAccount["admin_accesso"] == 2 ) {
-							
-							$livello = "Amministratore";
-							$livelloContainer = "bg".$livello;
-							
-						} elseif( $rowAccount["admin_accesso"] == 3 ) {
-							
-							$livello = "Utente";
-							$livelloContainer = "bg".$livello;
-							
-						}
+				if( $rowAccount["admin_accesso"] == 2 ):
+					
+					$livello = "Amministratore";
+					$livelloContainer = "bg".$livello;
+					
+				elseif( $rowAccount["admin_accesso"] == 3 ):
+					
+						$livello = "Utente";
+						$livelloContainer = "bg".$livello;
+										
+				endif;
 						
 			?>
 			 <tr>
