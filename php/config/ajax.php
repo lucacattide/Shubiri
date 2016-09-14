@@ -143,16 +143,80 @@ function imgUp($img){
   
   /* AGGIUNGI ARTICOLO DB BACKEND *******************/
   if(isset($_POST["nuovoArticolo"])): 
-	// query insert nuovo articolo 
+    // query insert nuovo articolo 
 	$sqlArticolo = "INSERT INTO `articolo`(`articolo_id`,`articolo_pagina_id`,`articolo_titolo`,`articolo_sottotitolo`,`articolo_testo`,`articolo_url`,`articolo_img_id`,`articolo_gallery_id`,`articolo_data_creazione`,`articolo_data_modifica`,`articolo_lingua`,`articolo_ordinamento`,`articolo_categoria_id`,`articolo_visibile`) VALUES ( NULL,'".$mysqli->real_escape_string($_POST["articolo_pagina_id"])."','".$mysqli->real_escape_string($_POST["articolo_titolo"])."','".$mysqli->real_escape_string($_POST["articolo_sottotitolo"])."','".$mysqli->real_escape_string($_POST["articolo_testo"])."','".$mysqli->real_escape_string($_POST["articolo_url"])."','','','".date("Y-m-d H:i:s")."','','','','','".$mysqli->real_escape_string($_POST["articolo_visibile"])."')";
-	if($mysqli->query($sqlArticolo)): 
+	if($mysqli->query($sqlArticolo)):  
+	     $nextId = $mysqli->insert_id;
+		 //UPLOAD IMGS ///////////////////////////////////////////////////
+		 foreach ($_FILES['file']['tmp_name'] as $key => $val ):
+			 $target_pathA = "../../img/";
+			 $temp = explode(".",$_FILES['file']['name'][$key]);
+			 // CHANGE NAME IMG /////////////////////////////////
+			 $newfilename = rand(1,99999) . '.' .end($temp);
+			 $target_pathA = $target_pathA.basename($newfilename);	 
+			 //UPLOAD IMG IN FOLDER DEFINED //////////////////////////////////
+			 if( is_uploaded_file($_FILES['file']['tmp_name'][$key]) ):
+				move_uploaded_file($_FILES['file']['tmp_name'][$key], $target_pathA) or die("Impossibile spostare il file, controlla l'esistenza o i permessi della directory dove fare l'upload. ");
+				$img = $newfilename;
+				/// QUERY IMG ///////////////////////////////////////////////
+				$sql="INSERT INTO `immagine`(`immagine_id`, `immagine_label`, `immagine_data_creazione`, `immagine_data_modifica`, `immagine_articolo_id`, `immagine_tipo`) VALUES (NULL,'".$img."','".date("Y-m-d H:i:s")."','','".$nextId."', '".$_FILES['file']['type'][$key]."')";
+	            $mysqli->query($sql); 
+			 //CLOSE UPLOAD IMG IN FOLDER DEFINED //////////////////////////////////	  
+			 endif;
+		  // CLOSE FOREACH ///////////////////// 
+		  endforeach;
 	  echo "Articolo Inserito!"; 
 	else:
 	  echo "ERRORE: RIPROVA";   
-	endif;  
-	
+	endif;
   endif;
   /* END AGGIUNGI ARTICOLO DB BACKEND *******************/
+  
+  /* ELIMINA IMMAGINE ARTICOLO *******************/
+  if(isset($_POST["eliminaImmagine"])): 
+      if(isset($_POST["modificaArticolo"])): else:
+		  $id = $_POST["immagine_id"];
+		  $sqlElImmagine = "DELETE FROM `immagine` WHERE immagine_id = $id";
+		  if($mysqli->query($sqlElImmagine)): 
+			echo "Immagine eliminata"; 
+		  else:
+		   echo "Errore! Riprova";   
+		  endif; 
+	  endif;
+  /* END ELIMINA IMMAGINE ARTICOLO *******************/
+  endif;
+  
+  /* MODIFICA ARTICOLO DB BACKEND *******************/
+  if(isset($_POST["modificaArticolo"])): 
+	  $id = $_POST["articolo_id"];
+	  $sqlModificaArticolo =" UPDATE `articolo` SET `articolo_titolo`='".$mysqli->real_escape_string($_POST["articolo_titolo"])."',`articolo_sottotitolo`='".$mysqli->real_escape_string($_POST["articolo_sottotitolo"])."',`articolo_testo`='".$mysqli->real_escape_string($_POST["articolo_testo"])."',`articolo_url`='".$mysqli->real_escape_string($_POST["articolo_url"])."', `articolo_data_modifica`='".date("Y-m-d H:i:s")."', `articolo_visibile`='".$mysqli->real_escape_string($_POST["articolo_visibile"])."' WHERE `articolo_id` = $id ";	
+      if($mysqli->query($sqlModificaArticolo)):  
+	     $nextId = $id;
+		 //UPLOAD IMGS ///////////////////////////////////////////////////
+		 foreach ($_FILES['file']['tmp_name'] as $key => $val ):
+			 $target_pathA = "../../img/";
+			 $temp = explode(".",$_FILES['file']['name'][$key]);
+			 // CHANGE NAME IMG /////////////////////////////////
+			 $newfilename = rand(1,99999) . '.' .end($temp);
+			 $target_pathA = $target_pathA.basename($newfilename);	 
+			 //UPLOAD IMG IN FOLDER DEFINED //////////////////////////////////
+			 if( is_uploaded_file($_FILES['file']['tmp_name'][$key]) ):
+				move_uploaded_file($_FILES['file']['tmp_name'][$key], $target_pathA) or die("Impossibile spostare il file, controlla l'esistenza o i permessi della directory dove fare l'upload. ");
+				$img = $newfilename;
+				/// QUERY IMG ///////////////////////////////////////////////
+				$sql="INSERT INTO `immagine`(`immagine_id`, `immagine_label`, `immagine_data_creazione`, `immagine_data_modifica`, `immagine_articolo_id`, `immagine_tipo`) VALUES (NULL,'".$img."','".date("Y-m-d H:i:s")."','','".$nextId."', '".$_FILES['file']['type'][$key]."')";
+	            $mysqli->query($sql); 
+			 //CLOSE UPLOAD IMG IN FOLDER DEFINED //////////////////////////////////	  
+			 endif;
+		  // CLOSE FOREACH ///////////////////// 
+		  endforeach;
+	  echo " Articolo Modificato!"; 
+	else:
+	  echo "ERRORE: RIPROVA";   
+	endif;
+  /* END MODIFICA ARTICOLO DB BACKEND *******************/
+  endif;
+  
   
   /* END ARTICOLO **********************************************************************/
 

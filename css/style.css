@@ -18923,3 +18923,32 @@ a:active, a:focus { outline: 0; }
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* AGGIUNTE ***************************************************************/
+
+.left-branding span.logo{
+	display:block;
+	float:left;
+	width:110px;
+	max-width:120px;
+	margin-top:10px;
+}
+
+
+.left-branding span.logo img{ width:100% !important; }
+
+
+.dialogWindowMod{
+	overflow-y:auto;
+}
+
+#image-holder .thumb-image{
+	width:100%;
+	padding:4px !important;
+}
+
+.nopadding{ padding:0px !important; }
+
+.boxImgMod{
+	margin-bottom:20px;
+}

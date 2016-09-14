@@ -13,7 +13,7 @@ if($pag == "account"):
 endif;
 
 
-if($pag == "pagina"):
+if($pag == "pagina" || $pag == "" ):
 
 	$sqlPagina = "SELECT * FROM `pagina`"; 
 

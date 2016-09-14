@@ -1,0 +1,2009 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Westilo - Bootstrap Responsive Admin Template</title>
+	
+	<meta name="description" content="Westilo is a powerful and clean admin panel template for web entrepreneurs, app developers and site owners as this can be used for the admin part of any WEB ADMIN, CMS, CRM, ERP, WEB APPLICATION, APPLICATION SOFTWARE, ACCOUNTING SOFTWARE, SCHOOL MANAGEMENT, PAYROLL MANAGEMENT, POINT OF SALE any web based software’s admin panels. It is very easy to use and extremely easy to integrate.">
+	<meta name="author" content="Kamrujaman Shohel">
+	<meta name="copyright" content="Kamrujaman Shohel">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2015-09-29T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+	<script src="assets/js/google-code-prettify/prettify.js"></script>
+
+	
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_1.png);}
+		a{color:#0000FF;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -webkit-gradient(linear, 0 0, 0 0088CC%, from(#DDDDDD), to(#0044CC));
+			  background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: linear-gradient(top, #0088CC, #0044CC);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+			  border-color: #0044CC #0044CC #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #0088CC #0088CC #bfbfbf;
+		  background-color: #0044CC;
+		}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ul{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ul a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ul a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ul a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project-westilo">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+			<li><a href="#getting_started" title="Getting Started">Getting Started</a></li>
+			<li><a href="#files_folders_structure" title="Files & Folders Structure">Files & Folders Structure</a></li>
+			<li><a href="#html_structure" title="Html Structure">Html Structure</a></li>
+			<li><a href="#box_widgets" title="Box Widgets">Box Widgets</a></li>
+			<li><a href="#css_structure" title="Css Structure">Css Structure</a></li>
+			<li><a href="#how_to_use_less" title="How to use less?">How to use less?</a></li>
+			<li><a href="#layouts" title="Layouts">Layouts</a></li>
+			<li><a href="#tables" title="Tables">Tables</a></li>
+			<li><a href="#forms" title="Forms">Forms</a></li>
+			<li><a href="#tags_input" title="Tags Input">Tags Input</a></li>
+			<li><a href="#input_mask" title="Input Mask">Input Mask</a></li>
+			<li><a href="#ui_elements" title="Ui Elements">Ui Elements</a></li>
+			<li><a href="#icheck" title="ICheck">ICheck</a></li>
+			<li><a href="#bootstrap_filestyle" title="Bootstrap Filestyle">Bootstrap Filestyle</a></li>
+			<li><a href="#on_off_switch" title="On/Off Switch">On/Off Switch</a></li>
+			<li><a href="#slider" title="Slider">Slider</a></li>
+			<li><a href="#bootbox" title="Bootbox">Bootbox</a></li>
+			<li><a href="#sweet_alert" title="Sweet Alert">Sweet Alert</a></li>
+			<li><a href="#chart" title="Chart">Chart</a></li>
+			<li><a href="#sources_credits" title="Sources & Credits">Sources & Credits</a></li>
+
+		</ul>
+		<div id="documenter_copyright">Copyright Kamrujaman Shohel 2015<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>Westilo</h1>
+	<h2>Bootstrap Responsive Admin Template</h2>
+	<div id="documenter_buttons">
+		<a href="http://westilian.com/" class="btn btn-primary btn-large">Support Forum</a> 
+	</div>
+	<hr>
+	<ul>
+	<li>created: 09/26/2015</li>
+	<li>latest update: 09/29/2015</li>
+	<li>by: Kamrujaman Shohel</li>
+	<li><a href="http://jaman.me/">jaman.me/</a></li>
+	<li>email: <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#106;&#97;&#109;&#97;&#110;&#46;&#109;&#101;">&#105;&#110;&#102;&#111;&#64;&#106;&#97;&#109;&#97;&#110;&#46;&#109;&#101;</a></li>
+	</ul>
+	<p>Westilo is a very powerful and clean admin panel template for web entrepreneurs, app developers and site owners as this can be used for the admin part of any WEB ADMIN, CMS, CRM, ERP, WEB APPLICATION, APPLICATION SOFTWARE, ACCOUNTING SOFTWARE, SCHOOL MANAGEMENT, PAYROLL MANAGEMENT, POINT OF SALE any web based software’s admin panels. It is very easy to use and extremely easy to integrate. Specially westilo admin have massive forms elements and custom widgets.
+
+Being powered by jQuery, less with cool plugins implemented in lots of separated HTML files and having 1000+ Font Icons with different styles, different widgets, customized charts, Notifications, tooltips this has become a complete admin panel for any kind of web presence.
+
+Finally, as this has been developed keeping ‘easy to integrate’ method in mind, it surely won’t bother you whether you are skilled user of not implementing it into your admin part.Try Westilo Admin to make your admin panel powerful with lots of smart features and to get an optimized look for any simple or critical admin functionality.</p>
+	</section>
+	
+	<section id="getting_started">
+	<div class="page-header"><h3>Getting Started</h3><hr class="notop"></div>
+<p>
+	This template is developed by well structured way. You can use following any step to get started with this template. &nbsp;You can use full template or you can use only layout and style of this template. I have included both version that you can easily use this tamplate.&nbsp;</p>
+<h2>
+	5 Complete Premade Copies</h2>
+<hr>
+<p>
+	<img alt="Westilo" src="assets/images/image_7.png" style="width: 298px; height: 133px;"></p>
+<p>
+	All Js, css, images files are included there&nbsp;</p>
+<p>
+	&nbsp;</p>
+<h2>
+	Only Layouts Files</h2>
+<hr>
+<p>
+	<img alt="Westilo" src="assets/images/image_8.png" style="width: 317px; height: 22px;"></p>
+<p>
+	<img alt="Westilo" src="assets/images/image_3.png" style="width: 271px; height: 189px;"></p>
+<p>
+	Only template layouts file are include there. This template have 10 complete predefine layouts.&nbsp;</p>
+<p>
+	&nbsp;</p>
+<div>
+	<h2>
+		Mandatory JS files</h2>
+	<hr>
+	<p>
+		Following js files must require because those files have dependencies in layout</p>
+	<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/lib/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/jquery-migrate.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/bootstrap.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/jquery.ui.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/jRespond.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/nav.accordion.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/hover.intent.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/hammerjs.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/jquery.hammer.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/jquery.fitvids.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/scrollup.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/smoothscroll.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/jquery.slimscroll.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/jquery.syntaxhighlighter.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/velocity.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/smart-resize.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/jquery.loadmask.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/apps.js&quot;&gt;&lt;/script&gt;</pre>
+	<h2>
+		Mandatory CSS files</h2>
+	<hr>
+	<p>
+		You can normally use following stylesheet</p>
+	<pre class="prettyprint lang-html linenums">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot; type=&quot;text/css&quot;&gt; </pre>
+	<p>
+		If you include this file then no need to add any others css file&nbsp;</p>
+	<p>
+		<strong>OR&nbsp;</strong></p>
+	<p>
+		You can individually include following files unless&nbsp;<span style="line-height: 19px;">style.css</span></p>
+	<pre class="prettyprint lang-html linenums">
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/font-awesome.css&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/material-design-iconic-font.css&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.css&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/animate.css&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/layout.css&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/components.css&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/widgets.css&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/plugins.css&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/pages.css&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/bootstrap-extend.css&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/common.css&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/responsive.css&quot;&gt;</pre>
+</div>
+<p>
+	If you use above files then no need to add style.css file. And if you add any additional css code then simple add it in&nbsp;</p>
+<pre class="prettyprint lang-html linenums">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/<span style="font-family: Arial, Verdana, sans-serif;">common.css</span><span style="font-family: Arial, Verdana, sans-serif;">&quot; type=&quot;text/css&quot;&gt;</span></pre>
+<p>
+	Above css file.&nbsp;</p>
+</section>
+<section id="files_folders_structure">
+	<div class="page-header"><h3>Files & Folders Structure</h3><hr class="notop"></div>
+<p>
+	<img alt="Westilo" src="assets/images/image_2.png" style="width: 298px; height: 472px;"></p>
+<p>
+	|- php &nbsp;folder contains Template related php files<br>
+	|- Data&nbsp;&nbsp;folder contains all example data related on template<br>
+	|- Images &nbsp;folder contains all all images of this template<br>
+	|- js &nbsp;folder contains all javascripts of this template<br>
+	|- fonts &nbsp;folder contains all iconic fonts<br>
+	|- less &nbsp;folder contains all less files<br>
+	|- css &nbsp;folder contains all stylesheets</p>
+</section>
+<section id="html_structure">
+	<div class="page-header"><h3>Html Structure</h3><hr class="notop"></div>
+<h2>
+	Basic Html Structure&nbsp;</h2>
+<hr>
+<pre class="prettyprint lang-html linenums">
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1&quot;&gt;
+&lt;title&gt;Westilo - Bootstrap Responsive Admin Template&lt;/title&gt;
+&lt;!--All stylesheet here--&gt;
+&lt;/head&gt;
+
+&lt;body class=&quot;leftbar-view&quot;&gt;
+   &lt;header class=&quot;topbar clearfix&quot;&gt;
+       &lt;!--Topbar--&gt;
+   &lt;/header&gt;
+
+   &lt;aside class=&quot;leftbar&quot;&gt;
+       &lt;!--Leftbar--&gt;
+   &lt;/aside&gt;
+
+   &lt;section class=&quot;main-container&quot;&gt;
+       &lt;div class=&quot;container-fluid&quot;&gt;
+         &lt;div class=&quot;page-header filled full-block light&quot;&gt;
+           &lt;!--Page Breadcrumb--&gt;
+         &lt;/div&gt;
+        &lt;!--Page Content Here --&gt;
+      &lt;/div&gt;
+
+   &lt;footer class=&quot;footer-container&quot;&gt;
+      &lt;!--Footer--&gt;
+   &lt;/footer&gt;
+   &lt;/section&gt;
+   &lt;aside class=&quot;rightbar&quot;&gt;
+      &lt;!--Rightbar--&gt;
+   &lt;/aside&gt;
+   &lt;!--All Js load here--&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</section>
+<section id="box_widgets">
+	<div class="page-header"><h3>Box Widgets</h3><hr class="notop"></div>
+<p>
+	This template contains a common box widgets. You can use this widget any where in the template</p>
+<h2>
+	Widget</h2>
+<hr>
+<h3>
+	Dependent files:</h3>
+<p>
+	<strong>Css</strong></p>
+<pre class="prettyprint lang-html linenums">
+  |---widgets.css
+</pre>
+<p>
+	<strong>Less</strong></p>
+<pre class="prettyprint lang-html linenums">
+  |---widgets.less</pre>
+<p>
+	<img alt="Westilo" src="assets/images/image_5.png" style="width: 563px; height: 214px;"></p>
+<h3>
+	Html Structure</h3>
+<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;widget-wrap&quot;&gt;
+            &lt;div class=&quot;widget-header block-header margin-bottom-0 clearfix&quot;&gt;
+                &lt;div class=&quot;pull-left&quot;&gt;
+                    &lt;h3&gt;Header&lt;/h3&gt;
+                    &lt;p&gt;Sub Title&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;pull-right w-action&quot;&gt;
+                    &lt;ul class=&quot;widget-action-bar&quot;&gt;
+                        Widges Action Icons bar
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;widget-container margin-top-0&quot;&gt;
+                &lt;div class=&quot;widget-content&quot;&gt;
+                    Widget Content Here
+                &lt;/div&gt;
+            &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="css_structure">
+	<div class="page-header"><h3>Css Structure</h3><hr class="notop"></div>
+<h2>
+	Table of Contents</h2>
+<hr>
+<p>
+	You will get full table of contents in&nbsp;</p>
+<pre class="prettyprint lang-html linenums">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot; type=&quot;text/css&quot;&gt; </pre>
+<p>
+	<strong>OR</strong></p>
+<pre class="prettyprint lang-html linenums">
+less/style.less</pre>
+<p>
+	All css are well structured and components base you can easily add, remove and edit any styles. You can use less or css as you own choice.&nbsp;</p>
+<pre class="prettyprint lang-css linenums">
+/*
+Template Name: Westilo - Bootstrap Responsive Admin Template
+Template URI: http://jaman.me/
+Author: Kamarujaman Shohel
+*/
+
+/*--------------------------------------------------------------
+&gt;&gt;&gt; TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Layout
+    1.1 Topbar / .topbar
+    1.2 Left Sidebar / .leftbar
+    1.3 Right Sidebar / .rightbar
+    1.4 Footer / .footer-container
+
+2.0 Elements &amp; Components
+    2.1 Waves / .waves-transition
+    2.2 Material Box Shadow / .z-depth-top
+    2.3 Header / .page-header
+    2.4 Flag Icons / .flag-icon
+    2.5 Forms / .j-forms
+    2.6 Tags Input / .tagsinput
+    2.7 Spinner / .bootstrap-touchspin
+    2.8 Icheck / .icheckbox_minimal
+    2.9 Select2 / .select2-container
+    2.10 Date Rangepicker / .daterangepicker.dropdown-menu
+    2.11 Datepicker / .datepicker
+    2.12 Colorpicker / .colorpicker
+    2.13 Footable / .footable
+
+3.0 Widgets
+4.0 Plugins
+5.0 Bootstrap Extended
+6.0 Common Styles
+7.0 Responsive
+--------------------------------------------------------------*/</pre>
+<h2>
+	CSS files</h2>
+<pre class="prettyprint lang-html linenums">
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/font-awesome.css&quot;&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/material-design-iconic-font.css&quot;&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.css&quot;&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/animate.css&quot;&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/layout.css&quot;&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/components.css&quot;&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/widgets.css&quot;&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/plugins.css&quot;&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/pages.css&quot;&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/bootstrap-extend.css&quot;&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/common.css&quot;&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/responsive.css&quot;&gt;</pre>
+</section>
+<section id="how_to_use_less">
+	<div class="page-header"><h3>How to use less?</h3><hr class="notop"></div>
+<p>
+	You can use any less compiler to use less. all less file is less folder</p>
+<h3>
+	Less Folder Structure&nbsp;</h3>
+<p>
+	<img alt="Westilo" src="assets/images/image_9.png" style="width: 262px; height: 518px;"></p>
+<h3>
+	Variable and Mixins</h3>
+<p>
+	All variable and mixins of this template is in following files</p>
+<pre class="prettyprint lang-html linenums">
+less/
+      variables.less
+      mixins.less</pre>
+<p>
+	&nbsp;</p>
+<p>
+	Simply just open <strong>style.less&nbsp;</strong>then you will get the structures of less. After make any changes just compile the files and use the files. If you want to use only one style.css file then just compile style.less only. Or you can compile following files for individul use.&nbsp;</p>
+<p>
+	<strong style="line-height: 19px;">style.less file</strong></p>
+<pre class="prettyprint lang-css linenums">
+/*
+Template Name: Westilo - Bootstrap Responsive Admin Template
+Template URI: http://jaman.me/
+Author: Kamarujaman Shohel
+*/
+
+/*--------------------------------------------------------------
+&gt;&gt;&gt; TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+1.0 Layout
+    1.1 Topbar / .topbar
+    1.2 Left Sidebar / .leftbar
+    1.3 Right Sidebar / .rightbar
+    1.4 Footer / .footer-container
+
+
+2.0 Elements &amp; Components
+    2.1 Waves / .waves-transition
+    2.2 Material Box Shadow / .z-depth-top
+    2.3 Header / .page-header
+    2.4 Flag Icons / .flag-icon
+    2.5 Forms / .j-forms
+    2.6 Tags Input / .tagsinput
+    2.7 Spinner / .bootstrap-touchspin
+    2.8 Icheck / .icheckbox_minimal
+    2.9 Select2 / .select2-container
+    2.10 Date Rangepicker / .daterangepicker.dropdown-menu
+    2.11 Datepicker / .datepicker
+    2.12 Colorpicker / .colorpicker
+    2.13 Footable / .footable
+
+3.0 Widgets
+4.0 Plugins
+5.0 Bootstrap Extended
+6.0 Common Styles
+7.0 Responsive
+--------------------------------------------------------------*/
+
+@import &quot;variables.less&quot;;
+@import &quot;mixins.less&quot;;
+
+/*------------------
+1.0 Layout
+--------------------*/
+@import &quot;layout.less&quot;;
+
+/*-----------------------
+2.0 Elements &amp; Components
+------------------------*/
+@import &quot;components.less&quot;;
+
+/*--------------------
+3.0 Widgets
+----------------------*/
+@import &quot;widgets.less&quot;;
+
+/*---------------------
+4.0 Plugins
+-----------------------*/
+@import &quot;plugins.less&quot;;
+
+/*---------------------
+5.0 Plugins
+-----------------------*/
+@import &quot;pages.less&quot;;
+
+/*---------------------
+6.0 Bootstrap Extended
+-----------------------*/
+@import &quot;bootstrap-extend.less&quot;;
+
+/*---------------------
+7.0 Common Styles
+-----------------------*/
+@import &quot;common.less&quot;;
+
+/*---------------------
+8.0 Responsive
+-----------------------*/
+@import &quot;responsive.less&quot;;</pre>
+<div>
+	&nbsp;</div>
+<div>
+	You can compile all files.</div>
+<div>
+	&nbsp;</div>
+</section>
+<section id="layouts">
+	<div class="page-header"><h3>Layouts</h3><hr class="notop"></div>
+<p>
+	This template have nice premade 10 layouts those are</p>
+<p>
+	<img alt="Westilo" src="assets/images/image_4.png" style="width: 265px; height: 199px;"></p>
+<p>
+	You can use any layout and make admin template as you own way.&nbsp;</p>
+</section>
+<section id="tables">
+	<div class="page-header"><h3>Tables</h3><hr class="notop"></div>
+<p>
+	<img alt="Westilo" src="assets/images/image_6.png"  ></p>
+<p>
+	&nbsp;</p>
+<h2>
+	Basic Styles</h2>
+<hr>
+<p>
+	This page contains all basic tables styles of the template.&nbsp;</p>
+<p>
+	&nbsp;</p>
+<h2>
+	Responsive FooTable</h2>
+<p>
+	For better documentation you can go&nbsp;<strong><a href="http://fooplugins.com/plugins/footable-jquery/" target="_blank">http://fooplugins.com/plugins/footable-jquery/</a></strong></p>
+<hr>
+<h3>
+	<strong>Dependent Files</strong></h3>
+<p>
+	<strong>Js files</strong></p>
+<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/lib/footable.all.js&quot;&gt;&lt;/script&gt;</pre>
+<div>
+	<strong>.less files</strong></div>
+<div>
+	components.less</div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>.css files</strong></div>
+<div>
+	components.css</div>
+<div>
+	&nbsp;</div>
+<div>
+	All tables styles are there</div>
+<div>
+	<h3>
+		<strong>Function Init</strong></h3>
+	<pre class="prettyprint lang-html linenums">
+<span style="line-height: 19px;">&lt;script src=&quot;js/apps.js&quot;&gt;&lt;/script&gt;</span></pre>
+</div>
+<pre class="prettyprint lang-js linenums">
+if ($.fn.footable) {
+
+        $(&#39;.foo-data-table&#39;).footable({
+            phone: 767,
+            tablet: 1024
+        })
+
+        $(&#39;.foo-data-table-filterable&#39;).footable({
+            phone: 767,
+            tablet: 1024
+        }).bind(&#39;footable_filtering&#39;, function(e) {
+                var selected = $(&#39;.filter-status&#39;).find(&#39;:selected&#39;).text();
+                if (selected &amp;&amp; selected.length &gt; 0) {
+                    e.filter += (e.filter &amp;&amp; e.filter.length &gt; 0) ? &#39; &#39; + selected : selected;
+                    e.clear = !e.filter;
+                }
+            });
+
+        $(&#39;.clear-filter&#39;).click(function(e) {
+            e.preventDefault();
+            $(&#39;.filter-status&#39;).val(&#39;&#39;);
+            $(&#39;table.foo-data-table-filterable&#39;).trigger(&#39;footable_clear_filter&#39;);
+        });
+
+        $(&#39;.filter-status&#39;).change(function(e) {
+            e.preventDefault();
+            $(&#39;table.foo-data-table-filterable&#39;).trigger(&#39;footable_filter&#39;, {
+                filter: $(&#39;#filter&#39;).val()
+            });
+        });
+
+        $(&#39;.foo-data-table-filterable&#39;).footable().on(&#39;click&#39;, &#39;.row-delete&#39;, function(e) {
+
+            e.preventDefault();
+            //get the footable object
+            var footable = $(&#39;.foo-data-table-filterable&#39;).data(&#39;footable&#39;);
+
+            //get the row we are wanting to delete
+            var row = $(this).parents(&#39;tr:first&#39;);
+            //delete the row
+            footable.removeRow(row);
+        });
+
+        $(&#39;#change-page-size&#39;).change(function(e) {
+            e.preventDefault();
+            var pageSize = $(this).val();
+            $(&#39;.foo-data-table-filterable&#39;).data(&#39;page-size&#39;, pageSize);
+            $(&#39;.foo-data-table-filterable&#39;).trigger(&#39;footable_initialized&#39;);
+        });
+    }</pre>
+<p>
+	&nbsp;</p>
+<h2>
+	Data Tables</h2>
+<p>
+	For better documentation you can go <a href="http://www.datatables.net/" target="_blank"><b>Here</b></a></p>
+<hr>
+<h3>
+	<strong>Dependent Files</strong></h3>
+<p>
+	<strong>Js files</strong></p>
+<pre class="prettyprint lang-js linenums">
+&lt;script src=&quot;js/lib/jquery.dataTables.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/dataTables.responsive.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/dataTables.tableTools.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/dataTables.bootstrap.js&quot;&gt;&lt;/script&gt;</pre>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>.less files</strong></div>
+<div>
+	components.less</div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>.css files</strong></div>
+<div>
+	components.css</div>
+<div>
+	&nbsp;</div>
+<div>
+	All tables styles are there</div>
+<div>
+	<h3>
+		<strong>Function Init</strong></h3>
+	<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/apps.js&quot;&gt;&lt;/script&gt;</pre>
+</div>
+<div>
+	<pre class="prettyprint lang-js linenums">
+if ($.fn.dataTable) {
+        $(&#39;.data-tbl&#39;).DataTable({
+            responsive: true,
+                        &quot;columnDefs&quot;: [ { &quot;targets&quot;: [1, 2], &quot;orderable&quot;: false }],
+            &quot;oLanguage&quot;: {
+                &quot;sLengthMenu&quot;: &#39;&lt;select class=&quot;tbl-data-select&quot;&gt;&#39; +
+                    &#39;&lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;&#39; +
+                    &#39;&lt;option value=&quot;20&quot;&gt;20&lt;/option&gt;&#39; +
+                    &#39;&lt;option value=&quot;30&quot;&gt;30&lt;/option&gt;&#39; +
+                    &#39;&lt;option value=&quot;40&quot;&gt;40&lt;/option&gt;&#39; +
+                    &#39;&lt;option value=&quot;50&quot;&gt;50&lt;/option&gt;&#39; +
+                   &#39;&lt;option value=&quot;-1&quot;&gt;All&lt;/option&gt;&#39; +
+                   &#39;&lt;/select&gt;&#39; + &#39;&lt;span class=&quot;r-label&quot;&gt;Entries&lt;/span&gt;&#39;
+            },
+            &quot;dom&quot;: &#39;&lt;&quot;row&quot; &lt;&quot;col-md-6&quot;l&gt;&lt;&quot;col-md-6&quot;f&gt;&gt;&lt;&quot;row&quot; &lt;&quot;col-md-12&quot;&lt;&quot;td-content&quot;rt&gt;&gt;&gt;&lt;&quot;row&quot; &lt;&quot;col-md-6&quot;i&gt;&lt;&quot;col-md-6&quot;p&gt;&gt;&#39;
+        });
+
+        if ($.fn.select2) {
+            $(&#39;.tbl-data-select&#39;).select2({
+                minimumResultsForSearch: -1
+            });
+        }
+    }</pre>
+</div>
+<p>
+	&nbsp;</p>
+<h2>
+	Exportable Tables</h2>
+<p>
+	For better documentation you can go&nbsp;<a href="http://ngiriraj.com/pages/htmltable_export/demo.php" target="_blank"><b>Here</b></a></p>
+<hr>
+<h3>
+	<strong>Dependent Files</strong></h3>
+<p>
+	<strong>Js files</strong></p>
+<pre class="prettyprint lang-js linenums">
+&lt;script src=&quot;js/lib/tableExport.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/jquery.base64.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/sprintf.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/jspdf.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/base64.js&quot;&gt;&lt;/script&gt;</pre>
+<div>
+	<h3>
+		<strong>Function Init</strong></h3>
+	<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/apps.js&quot;&gt;&lt;/script&gt;</pre>
+</div>
+<div>
+	&nbsp;</div>
+</section>
+<section id="forms">
+	<div class="page-header"><h3>Forms</h3><hr class="notop"></div>
+<p>
+	This template have massive form elements that make this template very powerful.&nbsp;Specially here have used very powerful j_form advanced premium resources. <a href="http://themeforest.net/item/just-forms-advanced/11301110" target="_blank">http://themeforest.net/item/just-forms-advanced/11301110&nbsp;&nbsp;</a>&nbsp;This item extended license is purchased so you don&#39;t have to &nbsp;re purchase it. &nbsp;</p>
+<h3>
+	<strong>Dependent Files</strong></h3>
+<p>
+	<strong>Js files</strong></p>
+<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/lib/jquery.maskedinput.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/jquery.validate.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/jquery.form.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/additional-methods.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/j-forms.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/j-forms-validations.js&quot;&gt;&lt;/script&gt;</pre>
+<div>
+	<strong>.less files</strong></div>
+<div>
+	/less/components/jform/j-forms.less</div>
+<div>
+	&nbsp;</div>
+<div>
+	<strong>.css files</strong></div>
+<div>
+	components.css</div>
+<div>
+	&nbsp;</div>
+<div>
+	All form styles are there</div>
+<div>
+	<h3>
+		<strong>Function Init</strong></h3>
+	<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/lib/j-forms.js&quot;&gt;&lt;/script&gt;</pre>
+</div>
+<p>
+	&nbsp;</p>
+</section>
+<section id="tags_input">
+	<div class="page-header"><h3>Tags Input</h3><hr class="notop"></div>
+<h3>
+	Dependent Files</h3>
+<pre class="prettyprint lang-html linenums">
+css/components.less
+js/lib/jquery.tagsinput.js&quot;&gt;&lt;/script&gt;</pre>
+<h3>
+	Less Files</h3>
+<pre class="prettyprint lang-html linenums">
+/less/components/tagsinput.less</pre>
+<h3>
+	How to use?</h3>
+<p>
+	First, add the Javascript and CSS files to your tag:</p>
+<pre class="prettyprint lang-html linenums">
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/components.css&quot; /&gt;
+&lt;script src=&quot;js/lib/jquery.tagsinput.js&quot;&gt;&lt;/script&gt;</pre>
+<p>
+	Create a real input in your form that will contain a comma-separated list of tags. You can put any default or existing tags in the value attribute, and they&#39;ll be handled properly</p>
+<pre class="prettyprint lang-html linenums">
+&lt;input name=&quot;tags&quot; class=&quot;tags-input&quot; value=&quot;foo,bar,baz&quot; /&gt;</pre>
+<p>
+	Then, simply call the tagsInput function on any field that should be treated as a list of tags.</p>
+<pre class="prettyprint lang-js linenums">
+$(&#39;.tags-input&#39;).tagsInput();</pre>
+<p>
+	You can use id=&quot;&quot; instead of class=&quot;&quot;&nbsp;</p>
+<h3>
+	Options</h3>
+<pre class="prettyprint lang-js linenums">
+$(selector).tagsInput({
+   &#39;autocomplete_url&#39;: url_to_autocomplete_api,
+   &#39;autocomplete&#39;: { option: value, option: value},
+   &#39;height&#39;:&#39;100px&#39;,
+   &#39;width&#39;:&#39;300px&#39;,
+   &#39;interactive&#39;:true,
+   &#39;defaultText&#39;:&#39;add a tag&#39;,
+   &#39;onAddTag&#39;:callback_function,
+   &#39;onRemoveTag&#39;:callback_function,
+   &#39;onChange&#39; : callback_function,
+   &#39;delimiter&#39;: [&#39;,&#39;,&#39;;&#39;],   // Or a string with a single delimiter. Ex: &#39;;&#39;
+   &#39;removeWithBackspace&#39; : true,
+   &#39;minChars&#39; : 0,
+   &#39;maxChars&#39; : 0, // if not provided there is no limit
+   &#39;placeholderColor&#39; : &#39;#666666&#39;
+});</pre>
+<h3>
+	Where called the function in this tmeplate?</h3>
+<pre class="prettyprint lang-html linenums">
+&lt;!--Template Plugins Initialize--&gt;
+&lt;script src=&quot;js/apps.js&quot;&gt;&lt;/script&gt;</pre>
+<h3>
+	Code</h3>
+<pre class="prettyprint lang-js linenums">
+if ($.fn.tagsInput) {
+        $(&#39;.tags-input&#39;).each(function () {
+            var tagsType = $(this).data(&#39;type&#39;)
+            var highlightColor = $(this).data(&#39;highlight-color&#39;)
+            if (tagsType === &#39;tags&#39;) {
+                $(this).tagsInput({
+                    width: &#39;auto&#39;
+                });
+            }
+
+            if (tagsType === &#39;highlighted-tags&#39;) {
+                $(this).tagsInput({
+                    width: &#39;auto&#39;,
+                    onChange: function (elem, elem_tags) {
+                        var languages = [&#39;php&#39;, &#39;ruby&#39;, &#39;javascript&#39;];
+                        $(&#39;.tag&#39;, elem_tags).each(function () {
+                            if ($(this).text().search(new RegExp(&#39;(&#39; + languages.join(&#39;|&#39;) + &#39;)&#39;)) &gt;= 0) $(this).css(&#39;background-color&#39;, highlightColor);
+                        });
+                    }
+                });
+            }
+        });
+    }</pre>
+</section>
+<section id="input_mask">
+	<div class="page-header"><h3>Input Mask</h3><hr class="notop"></div>
+<p>
+	&nbsp;</p>
+<h3>
+	Dependent Files</h3>
+<pre class="prettyprint lang-html linenums">
+js/lib/jquery.mask.js
+</pre>
+<h3>
+	How to use?</h3>
+<p>
+	First, add the Javascript file to your tag:</p>
+<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/lib/jquery.mask.js&quot;&gt;&lt;/script&gt;</pre>
+<p>
+	Create a real input in your form</p>
+<pre class="prettyprint lang-html linenums">
+&lt;input type=&quot;text&quot; class=&quot;form-control date-mask&quot; /&gt;</pre>
+<p>
+	Then, simply call the mask function by following ways:</p>
+<pre class="prettyprint lang-js linenums">
+ $(&#39;.date-mask&#39;).mask(&#39;11/11/1111&#39;, {
+            placeholder: &quot;__/__/____&quot;
+ });</pre>
+<p>
+	You can use id=&quot;&quot; instead of class=&quot;&quot;&nbsp;</p>
+<h3>
+	Basic Usage Examples</h3>
+<pre class="prettyprint lang-js linenums">
+$(&#39;.date-mask&#39;).mask(&#39;11/11/1111&#39;, {
+            placeholder: &quot;__/__/____&quot;
+        });
+
+        $(&#39;.time-mask&#39;).mask(&#39;00:00:00&#39;, {
+            placeholder: &quot;00:00:00&quot;
+        });
+
+        $(&#39;.date_time-mask&#39;).mask(&#39;00/00/0000 00:00:00&#39;, {
+            placeholder: &quot;00/00/0000 00:00:00&quot;
+        });
+
+        $(&#39;.cep-mask&#39;).mask(&#39;00000-000&#39;, {
+            placeholder: &quot;00000-000&quot;
+        });
+
+        $(&#39;.phone-mask&#39;).mask(&#39;0000-0000&#39;, {
+            placeholder: &quot;0000-0000&quot;
+        });
+
+        $(&#39;.phone_with_ddd-mask&#39;).mask(&#39;(00) 0000-0000&#39;, {
+            placeholder: &quot;(00) 0000-0000&quot;
+        });
+
+        $(&#39;.phone_us-mask&#39;).mask(&#39;(000) 000-0000&#39;, {
+            placeholder: &quot;(000) 000-0000&quot;
+        });
+
+        $(&#39;.mixed-mask&#39;).mask(&#39;AAA 000-S0S&#39;, {
+            placeholder: &quot;AAA 000-S0S&quot;
+        });
+
+        $(&#39;.cpf-mask&#39;).mask(&#39;000.000.000-00&#39;, {
+            reverse: true,
+            placeholder: &quot;000.000.000-00&quot;
+        });
+
+        $(&#39;.money-mask&#39;).mask(&#39;000.000.000.000.000,00&#39;, {
+            reverse: true,
+            placeholder: &quot;000.000.000.000.000,00&quot;
+        });
+
+        $(&#39;.money2-mask&#39;).mask(&quot;#.##0,00&quot;, {
+            reverse: true,
+            maxlength: false,
+            placeholder: &quot;#.##0,00&quot;
+        });
+
+        $(&#39;.ip_address-mask&#39;).mask(&#39;0ZZ.0ZZ.0ZZ.0ZZ&#39;, {
+            placeholder: &quot;0ZZ.0ZZ.0ZZ.0ZZ&quot;,
+            translation: {
+                &#39;Z&#39;: {
+                    pattern: /[0-9]/,
+                    optional: true
+                }
+            }
+        });
+
+        $(&#39;.ip_address-mask&#39;).mask(&#39;099.099.099.099&#39;, {
+            placeholder: &quot;099.099.099.099&quot;
+        });
+
+        $(&#39;.percent-mask&#39;).mask(&#39;##0,00%&#39;, {
+            reverse: true,
+            placeholder: &quot;###,##%&quot;
+        });
+
+        $(&#39;.clear-if-not-match-mask&#39;).mask(&quot;00/00/0000&quot;, {
+            clearIfNotMatch: true,
+            placeholder: &quot;__/__/____&quot;
+        });
+
+        $(&#39;.placeholder-mask&#39;).mask(&quot;00/00/0000&quot;, {
+            placeholder: &quot;__/__/____&quot;
+        });</pre>
+<h3>
+	Callback Examples</h3>
+<pre class="prettyprint lang-js linenums">
+var options =  { 
+  onComplete: function(cep) {
+    alert(&#39;CEP Completed!:&#39; + cep);
+  },
+
+  onKeyPress: function(cep, event, currentField, options){
+    console.log(&#39;An key was pressed!:&#39;, cep, &#39; event: &#39;, event, 
+                &#39;currentField: &#39;, currentField, &#39; options: &#39;, options);
+  },
+
+  onChange: function(cep){
+    console.log(&#39;cep changed! &#39;, cep);
+  },
+
+  onInvalid: function(val, e, f, invalid, options){
+    var error = invalid[0];
+    console.log (&quot;Digit: &quot;, error.v, &quot; is invalid for the position: &quot;, error.p, &quot;. We expect something like: &quot;, error.e);
+  }
+};
+
+$(&#39;.cep_with_callback&#39;).mask(&#39;00000-000&#39;, options);</pre>
+<h3>
+	On-the-fly mask change</h3>
+<pre class="prettyprint lang-js linenums">
+var options =  {onKeyPress: function(cep, e, field, options){
+  var masks = [&#39;00000-000&#39;, &#39;0-00-00-00&#39;];
+    mask = (cep.length&gt;7) ? masks[1] : masks[0];
+  $(&#39;.crazy_cep&#39;).mask(mask, options);
+}};
+
+$(&#39;.crazy_cep&#39;).mask(&#39;00000-000&#39;, options);</pre>
+<h3>
+	Mask as a function</h3>
+<pre class="prettyprint lang-js linenums">
+var SPMaskBehavior = function (val) {
+  return val.replace(/D/g, &#39;&#39;).length === 11 ? &#39;(00) 00000-0000&#39; : &#39;(00) 0000-00009&#39;;
+},
+
+spOptions = {
+  onKeyPress: function(val, e, field, options) {
+      field.mask(SPMaskBehavior.apply({}, arguments), options);
+    }
+};
+
+$(&#39;.sp_celphones&#39;).mask(SPMaskBehavior, spOptions);</pre>
+<h3>
+	Using HTML Notation Exemples</h3>
+<div>
+	<p>
+		To get your mask applied with the data-mask attribute just use it as the same way you use with the $.mask function.&nbsp;</p>
+	<pre class="prettyprint lang-html linenums">
+&lt;input type=&quot;text&quot; name=&quot;field-name&quot; data-mask=&quot;00/00/0000&quot; /&gt;</pre>
+	<p>
+		Activating a reversible mask&nbsp;</p>
+	<pre class="prettyprint lang-html linenums">
+&lt;input type=&quot;text&quot; name=&quot;field-name&quot; data-mask=&quot;00/00/0000&quot; data-mask-reverse=&quot;true&quot; /&gt;</pre>
+	<p>
+		Using clearIfNotMatch option&nbsp;</p>
+	<pre class="prettyprint lang-html linenums">
+&lt;input type=&quot;text&quot; name=&quot;field-name&quot; data-mask=&quot;00/00/0000&quot; data-mask-clearifnotmatch=&quot;true&quot; /&gt;</pre>
+	<p>
+		Using selectOnFocus option&nbsp;</p>
+	<pre class="prettyprint lang-html linenums">
+&lt;input type=&quot;text&quot; name=&quot;field-name&quot; data-mask=&quot;00/00/0000&quot; data-mask-selectonfocus=&quot;true&quot; /&gt;</pre>
+	<h3>
+		Removing the mask</h3>
+	<pre class="prettyprint lang-js linenums">
+$(&#39;.date&#39;).unmask();</pre>
+	<h3>
+		Getting the unmasked typed value</h3>
+	<pre class="prettyprint lang-js linenums">
+$(&#39;.date&#39;).cleanVal();</pre>
+	<h3>
+		Global Options</h3>
+	<pre class="prettyprint lang-js linenums">
+$.jMaskGlobals = {
+    maskElements: &#39;input,td,span,div&#39;,
+    dataMaskAttr: &#39;*[data-mask]&#39;,
+    dataMask: true,
+    watchInterval: 300,
+    watchInputs: true,
+    watchDataMask: false,
+    byPassKeys: [9, 16, 17, 18, 36, 37, 38, 39, 40, 91],
+    translation: {
+        &#39;0&#39;: {pattern: /d/},
+        &#39;9&#39;: {pattern: /d/, optional: true},
+        &#39;#&#39;: {pattern: /d/, recursive: true},
+        &#39;A&#39;: {pattern: /[a-zA-Z0-9]/},
+        &#39;S&#39;: {pattern: /[a-zA-Z]/}
+    }
+  };</pre>
+	<h3>
+		Where called the function in this tmeplate?</h3>
+	<pre class="prettyprint lang-html linenums">
+&lt;!--Template Plugins Initialize--&gt;
+&lt;script src=&quot;js/apps.js&quot;&gt;&lt;/script&gt;</pre>
+</div>
+<p>
+	&nbsp;</p>
+</section>
+<section id="ui_elements">
+	<div class="page-header"><h3>Ui Elements</h3><hr class="notop"></div>
+<h2>
+	Page Header</h2>
+<hr>
+<p>
+	&nbsp;</p>
+<h3>
+	<strong>Html Structure ( With subtitle)</strong></h3>
+<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;page-header filled full-block light&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;h2&gt;Title&lt;/h2&gt;
+            &lt;p&gt;Subtitle here&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;ul class=&quot;list-page-breadcrumb&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home &lt;i class=&quot;zmdi zmdi-chevron-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Layout &lt;i class=&quot;zmdi zmdi-chevron-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li class=&quot;active-page&quot;&gt; Dashboard&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+<div>
+	<h3>
+		<strong>Html Structure ( Without subtitle)</strong></h3>
+	<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;page-header single-line&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;h2&gt;Title&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-md-6&quot;&gt;
+                &lt;ul class=&quot;list-page-breadcrumb&quot;&gt;
+                 &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home &lt;i class=&quot;zmdi zmdi-chevron-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt; 
+                 &lt;li class=&quot;active-page&quot;&gt; Dashboard&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</pre>
+	<div>
+		&nbsp;</div>
+	<div>
+		<h2>
+			Noty</h2>
+		<p>
+			For better documentation you can go&nbsp;<a href="http://ned.im/noty/#/about" target="_blank"><b>Here</b></a></p>
+		<hr>
+		<p>
+			&nbsp;</p>
+		<div>
+			<h3>
+				Dependent Files</h3>
+			<pre class="prettyprint lang-html linenums">
+css/plugins.css
+/js/lib/jquery.noty.js</pre>
+			<h3>
+				Less Files</h3>
+			<pre class="prettyprint lang-html linenums">
+/less/plugins/noty.less</pre>
+			<div>
+				<h3>
+					<strong>Function Init</strong></h3>
+				<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/apps.js&quot;&gt;&lt;/script&gt;</pre>
+			</div>
+		</div>
+	</div>
+</div>
+<p>
+	&nbsp;</p>
+</section>
+<section id="icheck">
+	<div class="page-header"><h3>ICheck</h3><hr class="notop"></div>
+<p>
+	&nbsp;</p>
+<h3>
+	Dependent Files</h3>
+<pre class="prettyprint lang-html linenums">
+css/components.css
+js/lib/icheck.js</pre>
+<h3>
+	Less Files</h3>
+<pre class="prettyprint lang-html linenums">
+less/components/icheck.less</pre>
+<h3>
+	How to use?</h3>
+<p>
+	First, add the Javascript and CSS files to your tag:</p>
+<pre class="prettyprint lang-html linenums">
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/components.css&quot; /&gt;
+&lt;script src=&quot;js/lib/icheck.js&quot;&gt;&lt;/script&gt;</pre>
+<p>
+	Create a real input in your form with label</p>
+<pre class="prettyprint lang-html linenums">
+&lt;input class=&quot;i-min-check&quot; type=&quot;checkbox&quot; id=&quot;minimal-checkbox-1&quot;&gt;
+&lt;label for=&quot;minimal-checkbox-1&quot;&gt;Nam ut tempor lacus,&lt;/label&gt;</pre>
+<p>
+	Then, simply call the icheck function on any input</p>
+<pre class="prettyprint lang-js linenums">
+$(&#39;.i-min-check&#39;).iCheck({
+        checkboxClass: &#39;icheckbox_minimal&#39;,
+        radioClass: &#39;iradio_minimal&#39;,
+        increaseArea: &#39;30%&#39; // optional
+    });</pre>
+<p>
+	You can use id=&quot;&quot; instead of class=&quot;&quot;&nbsp;</p>
+<h3>
+	Options</h3>
+<pre class="prettyprint lang-html linenums">
+{
+  // &#39;checkbox&#39; or &#39;radio&#39; to style only checkboxes or radio buttons, both by default
+  handle: &#39;&#39;,
+  // base class added to customized checkboxes
+  checkboxClass: &#39;icheckbox&#39;,
+  // base class added to customized radio buttons
+  radioClass: &#39;iradio&#39;,
+  // class added on checked state (input.checked = true)
+  checkedClass: &#39;checked&#39;,
+    // if not empty, used instead of &#39;checkedClass&#39; option (input type specific)
+    checkedCheckboxClass: &#39;&#39;,
+    checkedRadioClass: &#39;&#39;,
+  // if not empty, added as class name on unchecked state (input.checked = false)
+  uncheckedClass: &#39;&#39;,
+    // if not empty, used instead of &#39;uncheckedClass&#39; option (input type specific)
+    uncheckedCheckboxClass: &#39;&#39;,
+    uncheckedRadioClass: &#39;&#39;,
+  // class added on disabled state (input.disabled = true)
+  disabledClass: &#39;disabled&#39;,
+    // if not empty, used instead of &#39;disabledClass&#39; option (input type specific)
+    disabledCheckboxClass: &#39;&#39;,
+    disabledRadioClass: &#39;&#39;,
+  // if not empty, added as class name on enabled state (input.disabled = false)
+  enabledClass: &#39;&#39;,
+    // if not empty, used instead of &#39;enabledClass&#39; option (input type specific)
+    enabledCheckboxClass: &#39;&#39;,
+    enabledRadioClass: &#39;&#39;,
+  // class added on indeterminate state (input.indeterminate = true)
+  indeterminateClass: &#39;indeterminate&#39;,
+    // if not empty, used instead of &#39;indeterminateClass&#39; option (input type specific)
+    indeterminateCheckboxClass: &#39;&#39;,
+    indeterminateRadioClass: &#39;&#39;,
+  // if not empty, added as class name on determinate state (input.indeterminate = false)
+  determinateClass: &#39;&#39;,
+    // if not empty, used instead of &#39;determinateClass&#39; option (input type specific)
+    determinateCheckboxClass: &#39;&#39;,
+    determinateRadioClass: &#39;&#39;,
+  // class added on hover state (pointer is moved onto input)
+  hoverClass: &#39;hover&#39;,
+  // class added on focus state (input has gained focus)
+  focusClass: &#39;focus&#39;,
+  // class added on active state (mouse button is pressed on input)
+  activeClass: &#39;active&#39;,
+  // adds hoverClass to customized input on label hover and labelHoverClass to label on input hover
+  labelHover: true,
+    // class added to label if labelHover set to true
+    labelHoverClass: &#39;hover&#39;,
+  // increase clickable area by given % (negative number to decrease)
+  increaseArea: &#39;&#39;,
+  // true to set &#39;pointer&#39; CSS cursor over enabled inputs and &#39;default&#39; over disabled
+  cursor: false,
+  // set true to inherit original input&#39;s class name
+  inheritClass: false,
+  // if set to true, input&#39;s id is prefixed with &#39;iCheck-&#39; and attached
+  inheritID: false,
+  // set true to activate ARIA support
+  aria: false,
+  // add HTML code or text inside customized input
+  insert: &#39;&#39;
+}</pre>
+<h3>
+	Where called the function in this tmeplate?</h3>
+<pre class="prettyprint lang-html linenums">
+&lt;!--Template Plugins Initialize--&gt;
+&lt;script src=&quot;js/apps.js&quot;&gt;&lt;/script&gt;</pre>
+</section>
+<section id="bootstrap_filestyle">
+	<div class="page-header"><h3>Bootstrap Filestyle</h3><hr class="notop"></div>
+<p>
+	&nbsp;</p>
+<h3>
+	Dependent Files</h3>
+<pre class="prettyprint lang-html linenums">
+js/lib/bootstrap-filestyle.js</pre>
+<h3>
+	How to use?</h3>
+<p>
+	First, add the Javascript &nbsp;file to your tag:</p>
+<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/lib/bootstrap-filestyle.js&quot;&gt;&lt;/script&gt;</pre>
+<p>
+	Create a real file element in your form</p>
+<pre class="prettyprint lang-html linenums">
+ &lt;input type=&quot;file&quot; class=&quot;filestyle&quot;&gt;</pre>
+<p>
+	Then, simply call the&nbsp;<span style="line-height: 19px;">filestyle</span>&nbsp;function.</p>
+<pre class="prettyprint lang-js linenums">
+$(&quot;:file&quot;).filestyle();</pre>
+<p>
+	You can use id=&quot;&quot; instead of class=&quot;&quot;&nbsp;</p>
+<h3>
+	<span style="font-size: 12px;">Where called the function in this tmeplate?</span></h3>
+<pre class="prettyprint lang-html linenums">
+&lt;!--Template Plugins Initialize--&gt;
+&lt;script src=&quot;js/apps.js&quot;&gt;&lt;/script&gt;</pre>
+<h3>
+	Code</h3>
+<pre class="prettyprint lang-js linenums">
+if ($.fn.filestyle) {
+        $(&quot;:file&quot;).filestyle();
+    }</pre>
+</section>
+<section id="on_off_switch">
+	<div class="page-header"><h3>On/Off Switch</h3><hr class="notop"></div>
+<h2>
+	<span style="font-size: 12px;">Dependent Files</span></h2>
+<pre class="prettyprint lang-html linenums">
+js/lib/switchery.js</pre>
+<h3>
+	Less Files</h3>
+<pre class="prettyprint lang-html linenums">
+/less/plugins/switchery.less</pre>
+<h3>
+	How to use?</h3>
+<p>
+	First, add the Javascript and CSS files to your tag:</p>
+<pre class="prettyprint lang-html linenums">
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/plugins.css&quot; /&gt;
+&lt;script src=&quot;js/lib/switchery.js&quot;&gt;&lt;/script&gt;</pre>
+<p>
+	Then make a input</p>
+<pre class="prettyprint lang-html linenums">
+&lt;input type=&quot;checkbox&quot; class=&quot;yourClass&quot; checked /&gt;</pre>
+<h3>
+	Js function and usage&nbsp;</h3>
+<pre class="prettyprint lang-js linenums">
+var elem = document.querySelector(&#39;.<span style="font-family: Arial, Verdana, sans-serif;">yourClass</span><span style="font-family: Arial, Verdana, sans-serif;">&#39;);</span>
+var init = new Switchery(elem,{
+            color: &#39;#15bdc3&#39;,
+            jackColor: &#39;#fff&#39;,
+            secondaryColor: &#39;#eee&#39;,
+            jackSecondaryColor: &#39;#fff&#39;,
+});</pre>
+<h3>
+	On Change</h3>
+<div>
+	<pre class="prettyprint lang-js linenums">
+<span style="line-height: 19px;">elem</span>.onchange = function () {
+        if (<span style="line-height: 19px;">elem</span>.checked === true) {
+            // yourFunction
+        } else {
+             // yourFunction
+        }
+    };</pre>
+</div>
+<h3>
+	<span style="font-size: 12px;">Where called the function in this tmeplate?</span></h3>
+<pre class="prettyprint lang-html linenums">
+&lt;!--Template Plugins Initialize--&gt;
+&lt;script src=&quot;js/apps.js&quot;&gt;&lt;/script&gt;</pre>
+<h3>
+	Code</h3>
+<pre class="prettyprint lang-js linenums">
+var sw_large = Array.prototype.slice.call(document.querySelectorAll(&#39;.switch-large&#39;));
+    sw_large.forEach(function (html) {
+        var sw_largeGen = new Switchery(html, {
+            size: &#39;large&#39;,
+            color: &#39;#66bb6a&#39;,
+            jackColor: &#39;#fff&#39;,
+            secondaryColor: &#39;#eee&#39;,
+            jackSecondaryColor: &#39;#fff&#39;,
+        });
+    });
+
+    var sw_m = Array.prototype.slice.call(document.querySelectorAll(&#39;.switch-m&#39;));
+    sw_m.forEach(function (html) {
+        var switchery = new Switchery(html, {
+            color: &#39;#66bb6a&#39;,
+            jackColor: &#39;#fff&#39;,
+            secondaryColor: &#39;#eee&#39;,
+            jackSecondaryColor: &#39;#fff&#39;,
+        });
+    });
+
+    var sw_small = Array.prototype.slice.call(document.querySelectorAll(&#39;.switch-small&#39;));
+
+    sw_small.forEach(function (html) {
+        var switchery = new Switchery(html, {
+            size: &#39;small&#39;,
+            color: &#39;#66bb6a&#39;,
+            jackColor: &#39;#fff&#39;,
+            secondaryColor: &#39;#eee&#39;,
+            jackSecondaryColor: &#39;#fff&#39;,
+        });
+    });
+    
+    var sw_c = Array.prototype.slice.call(document.querySelectorAll(&#39;.switch-c&#39;));
+
+    sw_c.forEach(function (html) {
+        var switchery = new Switchery(html, {
+            color: &#39;#15bdc3&#39;,
+            jackColor: &#39;#fff&#39;,
+            secondaryColor: &#39;#eee&#39;,
+            jackSecondaryColor: &#39;#fff&#39;,
+        });
+    });</pre>
+</section>
+<section id="slider">
+	<div class="page-header"><h3>Slider</h3><hr class="notop"></div>
+<h3>
+	Dependent Files</h3>
+<pre class="prettyprint lang-html linenums">
+css/plugins.css
+js/lib/jquery.nouislider.js</pre>
+<h3>
+	Less Files</h3>
+<pre class="prettyprint lang-html linenums">
+/less/plugins/jquery.nouislider.less</pre>
+<h3>
+	How to use?</h3>
+<p>
+	First, add the Javascript and CSS files to your tag:</p>
+<pre class="prettyprint lang-html linenums">
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/plugins.css&quot; /&gt;
+&lt;script src=&quot;js/lib/jquery.nouislider.js&quot;&gt;&lt;/script&gt;</pre>
+<h3>
+	<span style="font-size: 12px;">Where called the function in this tmeplate?</span></h3>
+<pre class="prettyprint lang-html linenums">
+&lt;!--Template Plugins Initialize--&gt;
+&lt;script src=&quot;js/apps.js&quot;&gt;&lt;/script&gt;</pre>
+<h3>
+	&nbsp;</h3>
+<h3>
+	code</h3>
+<pre class="prettyprint lang-js linenums">
+$(&quot;#slider-range&quot;).noUiSlider({
+            start: [50, 200],
+            connect: true,
+            format: wNumb({
+                mark: &#39;&#39;,
+                decimals: 0,
+                prefix: &#39;$&#39;
+            }),
+            range: {
+                &#39;min&#39;: 0,
+                &#39;20%&#39;: 100,
+                &#39;40%&#39;: 200,
+                &#39;60%&#39;: 300,
+                &#39;80%&#39;: 400,
+                &#39;max&#39;: 500
+            }
+        });
+        $(&#39;#slider-range&#39;).Link(&#39;lower&#39;).to($(&#39;#slider-snap-value-lower&#39;));
+        $(&#39;#slider-range&#39;).Link(&#39;upper&#39;).to($(&#39;#slider-snap-value-upper&#39;));
+
+        $(&quot;#slider-range&quot;).noUiSlider_pips({
+            mode: &#39;range&#39;,
+            density: 3,
+            format: wNumb({
+                decimals: 0,
+                prefix: &#39;$&#39;
+            })
+        });</pre>
+<p>
+	&nbsp;</p>
+<h3>
+	code</h3>
+<pre class="prettyprint lang-js linenums">
+ var range_all_sliders = {
+            &#39;min&#39;: [0],
+            &#39;10%&#39;: [500, 500],
+            &#39;50%&#39;: [4000, 1000],
+            &#39;max&#39;: [10000]
+        };
+        $(&quot;#pips-range&quot;).noUiSlider({
+            start: [20, 80],
+            connect: true,
+            range: {
+                &#39;min&#39;: 0,
+                &#39;max&#39;: 100
+            }
+        });
+
+        $(&quot;#pips-range-01&quot;).noUiSlider({
+            start: [4000],
+            range: {
+                &#39;min&#39;: [2000],
+                &#39;max&#39;: [10000]
+            }
+        });
+
+        $(&quot;#pips-range-02&quot;).noUiSlider({
+            range: range_all_sliders,
+            start: [0, 500],
+            connect: true,
+            range: {
+                &#39;min&#39;: 0,
+                &#39;max&#39;: 1500
+            }
+        });</pre>
+<p>
+	&nbsp;</p>
+<h3>
+	code</h3>
+<pre class="prettyprint lang-js linenums">
+$(&quot;#pips-range-vertical&quot;).noUiSlider({
+            range: range_all_sliders,
+            start: 0,
+            orientation: &#39;vertical&#39;
+        });
+
+        $(&quot;#pips-range-vertical-01&quot;).noUiSlider({
+            range: range_all_sliders,
+            start: [300, 1200],
+            connect: true,
+            range: {
+                &#39;min&#39;: 0,
+                &#39;20%&#39;: 300,
+                &#39;80%&#39;: 1200,
+                &#39;max&#39;: 1500
+            },
+            orientation: &#39;vertical&#39;
+        });
+
+        $(&quot;#pips-range-vertical-02&quot;).noUiSlider({
+            range: range_all_sliders,
+            start: [400, 1000],
+            connect: true,
+            range: {
+                &#39;min&#39;: 0,
+                &#39;max&#39;: 1500
+            },
+            orientation: &#39;vertical&#39;
+        });
+
+        function filter500(value, type) {
+            return value % 1000 ? 2 : 1;
+        }
+
+        $(&quot;.pips-range&quot;).noUiSlider_pips({
+            mode: &#39;range&#39;,
+            density: 3,
+            filter: filter500,
+            format: wNumb({
+                decimals: 2,
+                prefix: &#39;$&#39;
+            })
+        });</pre>
+</section>
+<section id="bootbox">
+	<div class="page-header"><h3>Bootbox</h3><hr class="notop"></div>
+<h2>
+	&nbsp;</h2>
+<h3>
+	Dependent Files</h3>
+<pre class="prettyprint lang-html linenums">
+js/lib/bootbox.js</pre>
+<h3>
+	How to use?</h3>
+<p>
+	First, add the Javascript &nbsp;file to your tag:</p>
+<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/lib/bootbox.js&quot;&gt;&lt;/script&gt;</pre>
+<p>
+	Then follow the step:</p>
+<h3>
+	<span style="font-size: 12px;">Where called the function in this tmeplate?</span></h3>
+<pre class="prettyprint lang-html linenums">
+&lt;!--Template Plugins Initialize--&gt;
+&lt;script src=&quot;js/apps.js&quot;&gt;&lt;/script&gt;</pre>
+<h3>
+	Alert</h3>
+<pre class="prettyprint lang-js linenums">
+// Alert
+    bb_demos.alert = function () {
+        bootbox.alert(&quot;Hello world!&quot;, function () {
+        DemoCallBack.show(&quot;Hello world callback&quot;);
+   });
+
+    };</pre>
+<h3>
+	Confirm</h3>
+<pre class="prettyprint lang-js linenums">
+// Confirm
+    bb_demos.confirm = function () {
+        bootbox.confirm(&quot;Are you sure?&quot;, function (result) {
+            DemoCallBack.show(&quot;Confirm result: &quot; + result);
+        });
+    };</pre>
+<h3>
+	Prompt</h3>
+<pre class="prettyprint lang-js linenums">
+// Prompt
+    bb_demos.prompt = function () {
+        bootbox.prompt({
+            title: &quot;What is your real name?&quot;,
+            value: &quot;Kamrujaman Shohel&quot;,
+            callback: function (result) {
+                if (result === null) {
+                    DemoCallBack.show(&quot;Prompt dismissed&quot;);
+                } else {
+                    DemoCallBack.show(&quot;Hi &lt;b&gt;&quot; + result + &quot;&lt;/b&gt;&quot;);
+                }
+            }
+        });
+    }</pre>
+<h3>
+	Dialog</h3>
+<div>
+	<pre class="prettyprint lang-js linenums">
+// Dialog
+
+    bb_demos.dialog = function () {
+            bootbox.dialog({
+                message: &quot;I am a custom dialog&quot;,
+                title: &quot;Custom title&quot;,
+                buttons: {
+                    success: {
+                        label: &quot;Success!&quot;,
+                        className: &quot;btn-success&quot;,
+                        callback: function () {
+                            DemoCallBack.show(&quot;great success&quot;);
+                        }
+                    },
+                    danger: {
+                        label: &quot;Danger!&quot;,
+                        className: &quot;btn-danger&quot;,
+                        callback: function () {
+                            DemoCallBack.show(&quot;uh oh, look out!&quot;);
+                        }
+                    },
+
+                    main: {
+                        label: &quot;Click ME!&quot;,
+                        className: &quot;btn-primary&quot;,
+                        callback: function () {
+                            DemoCallBack.show(&quot;Primary button&quot;);
+                        }
+                    }
+                }
+            });
+        }</pre>
+</div>
+<h3>
+	Custom Html Contents</h3>
+<pre class="prettyprint lang-js linenums">
+// Custom Html Contents
+    bb_demos.custom_html = function () {
+        bootbox.dialog({
+            title: &quot;That html&quot;,
+            message: &#39;&lt;img src=&quot;images/bootstrap_logo.png&quot; alt=&quot;image&quot;/&gt;&lt;br/&gt; You can also use &lt;b&gt;html&lt;/b&gt;&#39;
+        });
+    }</pre>
+<h3>
+	Custom Html Forms</h3>
+<pre class="prettyprint lang-js linenums">
+// Custom Html Forms
+
+    bb_demos.html_forms = function () {
+        bootbox.dialog({
+            title: &quot;This is a form in a modal.&quot;,
+            message: &#39;&lt;div class=&quot;row&quot;&gt;  &#39; +
+                &#39;&lt;div class=&quot;col-md-12&quot;&gt; &#39; +
+                &#39;&lt;form class=&quot;form-horizontal&quot;&gt; &#39; +
+                &#39;&lt;div class=&quot;form-group&quot;&gt; &#39; +
+                &#39;&lt;label class=&quot;col-md-4 control-label&quot; for=&quot;name&quot;&gt;Name&lt;/label&gt; &#39; +
+                &#39;&lt;div class=&quot;col-md-4&quot;&gt; &#39; +
+                &#39;&lt;input id=&quot;name&quot; name=&quot;name&quot; type=&quot;text&quot; placeholder=&quot;Your name&quot; class=&quot;form-control input-md&quot;&gt; &#39; +
+
+                &#39;&lt;span class=&quot;help-block&quot;&gt;Here goes your name&lt;/span&gt; &lt;/div&gt; &#39; +
+                &#39;&lt;/div&gt; &#39; +
+                &#39;&lt;div class=&quot;form-group&quot;&gt; &#39; +
+                &#39;&lt;label class=&quot;col-md-4 control-label&quot; for=&quot;awesomeness&quot;&gt;How awesome is this?&lt;/label&gt; &#39; +
+                &#39;&lt;div class=&quot;col-md-4&quot;&gt; &lt;div class=&quot;radio&quot;&gt; &lt;label for=&quot;awesomeness-0&quot;&gt; &#39; +
+                &#39;&lt;input type=&quot;radio&quot; name=&quot;awesomeness&quot; id=&quot;awesomeness-0&quot; value=&quot;Really awesome&quot; checked=&quot;checked&quot;&gt; &#39; +
+                &#39;Really awesome &lt;/label&gt; &#39; +
+                &#39;&lt;/div&gt;&lt;div class=&quot;radio&quot;&gt; &lt;label for=&quot;awesomeness-1&quot;&gt; &#39; +
+                &#39;&lt;input type=&quot;radio&quot; name=&quot;awesomeness&quot; id=&quot;awesomeness-1&quot; value=&quot;Super awesome&quot;&gt; Super awesome &lt;/label&gt; &#39; +
+                &#39;&lt;/div&gt; &#39; +
+                &#39;&lt;/div&gt; &lt;/div&gt;&#39; +
+                &#39;&lt;/form&gt; &lt;/div&gt;  &lt;/div&gt;&#39;,
+            buttons: {
+                success: {
+                    label: &quot;Save&quot;,
+                    className: &quot;btn-success&quot;,
+                    callback: function () {
+                        var name = $(&#39;#name&#39;).val();
+                        var answer = $(&quot;input[name=&#39;awesomeness&#39;]:checked&quot;).val()
+                        DemoCallBack.show(&quot;Hello &quot; + name + &quot;. You&#39;ve chosen &lt;b&gt;&quot; + answer + &quot;&lt;/b&gt;&quot;);
+                    }
+                }
+            }
+        });
+    }</pre>
+</section>
+<section id="sweet_alert">
+	<div class="page-header"><h3>Sweet Alert</h3><hr class="notop"></div>
+<h2>
+	&nbsp;</h2>
+<p>
+	&nbsp;</p>
+<h3>
+	Dependent Files</h3>
+<pre class="prettyprint lang-html linenums">
+css/plugins.css
+js/lib/sweetalert.js</pre>
+<h3>
+	Less Files</h3>
+<pre class="prettyprint lang-html linenums">
+/less/plugins/sweetalert.less</pre>
+<h3>
+	How to use?</h3>
+<p>
+	First, add the Javascript and CSS files to your tag:</p>
+<pre class="prettyprint lang-html linenums">
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/plugins.css&quot; /&gt;
+&lt;script src=&quot;js/lib/sweetalert.js&quot;&gt;&lt;/script&gt;</pre>
+<div>
+	&nbsp; &nbsp;&nbsp;</div>
+<h3>
+	<span style="font-size: 12px;">Where called the function in this tmeplate?</span></h3>
+<pre class="prettyprint lang-html linenums">
+&lt;!--Template Plugins Initialize--&gt;
+&lt;script src=&quot;js/apps.js&quot;&gt;&lt;/script&gt;</pre>
+<h3>
+	Code</h3>
+<h3>
+	Simple Alert</h3>
+<pre class="prettyprint lang-js linenums">
+  $(&#39;.simple-alert&#39;).on(&#39;click&#39;, function (e) {
+        e.preventDefault();
+        swal({
+            title: &quot;Are you sure?&quot;,
+            text: &quot;You will not be able to recover this imaginary file!&quot;,
+            confirmButtonColor: &quot;#DD6B55&quot;,
+        });
+    });</pre>
+<div>
+	<h3>
+		Success Allert</h3>
+</div>
+<pre class="prettyprint lang-js linenums">
+    $(&#39;.success-alert&#39;).on(&#39;click&#39;, function (e) {
+        e.preventDefault();
+        swal({
+            title: &quot;Are you sure?&quot;,
+            text: &quot;You will not be able to recover this imaginary file!&quot;,
+            type: &quot;success&quot;,
+            confirmButtonColor: &quot;#4caf50&quot;
+        });
+    });</pre>
+<div>
+	<h3>
+		Alert with confirmation message</h3>
+</div>
+<pre class="prettyprint lang-js linenums">
+    $(&#39;.warning-btn-ok&#39;).on(&#39;click&#39;, function (e) {
+        e.preventDefault();
+        swal({
+            title: &quot;Are you sure?&quot;,
+            text: &quot;You will not be able to recover this imaginary file!&quot;,
+            type: &quot;warning&quot;,
+            showCancelButton: true,
+            confirmButtonColor: &quot;#DD6B55&quot;,
+            confirmButtonText: &quot;Yes, delete it!&quot;,
+            closeOnConfirm: false
+        }, function () {
+            swal({
+                title: &quot;Your imaginary file has been deleted.&quot;,
+                type: &quot;success&quot;,
+                confirmButtonColor: &quot;#4caf50&quot;
+            });
+        });
+    });</pre>
+<div>
+	<h3>
+		Alert with cancel message</h3>
+</div>
+<pre class="prettyprint lang-js linenums">
+    $(&#39;.warning-btn-cancel&#39;).on(&#39;click&#39;, function (e) {
+        e.preventDefault();
+        swal({
+            title: &quot;Are you sure?&quot;,
+            text: &quot;You will not be able to recover this imaginary file!&quot;,
+            type: &quot;warning&quot;,
+            showCancelButton: true,
+            confirmButtonColor: &quot;#DD6B55&quot;,
+            confirmButtonText: &quot;Yes, delete it!&quot;,
+            cancelButtonText: &quot;No, cancel plx!&quot;,
+            closeOnConfirm: false,
+            closeOnCancel: false
+
+        }, function (isConfirm) {
+            if (isConfirm) {
+                swal(&quot;Deleted!&quot;, &quot;Your imaginary file has been deleted.&quot;, &quot;success&quot;);
+            } else {
+                swal(&quot;Cancelled&quot;, &quot;Your imaginary file is safe :)&quot;, &quot;error&quot;);
+            }
+        });
+
+    });</pre>
+<div>
+	<h3>
+		Alert with custom icon</h3>
+</div>
+<pre class="prettyprint lang-js linenums">
+    $(&#39;.warning-custom-icon&#39;).on(&#39;click&#39;, function (e) {
+        e.preventDefault();
+        swal({
+            title: &quot;Sweet!&quot;,
+            text: &quot;Here&#39;s a custom image.&quot;,
+            imageUrl: &quot;images/thumbs-up.jpg&quot;
+        });
+    });</pre>
+<div>
+	<h3>
+		Alert with custom Html</h3>
+</div>
+<pre class="prettyprint lang-js linenums">
+    $(&#39;.warning-custom-html&#39;).on(&#39;click&#39;, function (e) {
+        e.preventDefault();
+        swal({
+            title: &quot;HTML &lt;small&gt;Title&lt;/small&gt;!&quot;,
+            text: &#39;A custom &lt;span style=&quot;color:#F8BB86&quot;&gt;html&lt;span&gt; message.&#39;,
+            html: true
+        });
+    });</pre>
+<div>
+	<h3>
+		Alert Auto Close after 3 seconds</h3>
+</div>
+<pre class="prettyprint lang-js linenums">
+    $(&#39;.warning-auto-close&#39;).on(&#39;click&#39;, function (e) {
+        e.preventDefault();
+        swal({
+            title: &quot;Auto close alert!&quot;,
+            text: &quot;I will close in 3 seconds.&quot;,
+            timer: 3000,
+            showConfirmButton: false
+        });
+    });</pre>
+<h3>
+	Prompt</h3>
+<pre class="prettyprint lang-js linenums">
+    $(&#39;.warning-prompt&#39;).on(&#39;click&#39;, function (e) {
+        e.preventDefault();
+        swal({
+            title: &quot;An input!&quot;,
+            text: &quot;Write something interesting:&quot;,
+            type: &quot;input&quot;,
+            showCancelButton: true,
+            closeOnConfirm: false,
+            animation: &quot;slide-from-top&quot;,
+            inputPlaceholder: &quot;Write something&quot;
+        }, function (inputValue) {
+            if (inputValue === false) return false;
+            if (inputValue === &quot;&quot;) {
+                swal.showInputError(&quot;You need to write something!&quot;);
+                return false
+            }
+            swal(&quot;Nice!&quot;, &quot;You wrote: &quot; + inputValue, &quot;success&quot;);
+        });
+    });</pre>
+<div>
+	&nbsp;</div>
+</section>
+<section id="chart">
+	<div class="page-header"><h3>Chart</h3><hr class="notop"></div>
+<h2>
+	Flot chart</h2>
+<hr>
+<h3>
+	<span style="font-size: 12px;">Dependent files</span></h3>
+<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/lib/chart/flot/excanvas.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/chart/flot/jquery.flot.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/chart/flot/curvedLines.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/chart/flot/jquery.flot.time.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/chart/flot/jquery.flot.stack.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/chart/flot/jquery.flot.axislabels.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/chart/flot/jquery.flot.resize.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/chart/flot/jquery.flot.tooltip.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/chart/flot/jquery.flot.spline.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/chart/flot/jquery.flot.pie.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/chart/flot/jquery.flot.symbol.min.js&quot;&gt;&lt;/script&gt;</pre>
+<h3>
+	Chart Initialize</h3>
+<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/lib/charts.init.js&quot;&gt;&lt;/script&gt;</pre>
+<p>
+	&nbsp;</p>
+<h2>
+	Chart JS</h2>
+<hr>
+<h3>
+	<span style="font-size: 12px;">Dependent files</span></h3>
+<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/lib/chart/chart-js/chart.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/chart/chart-js/chart.stackedbar.js&quot;&gt;&lt;/script&gt;</pre>
+<h3>
+	Chart Initialize</h3>
+<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/lib/chart.js.init.js&quot;&gt;&lt;/script&gt;</pre>
+<p>
+	&nbsp;</p>
+<h2>
+	Chart JS</h2>
+<hr>
+<h3>
+	<span style="font-size: 12px;">Dependent files</span></h3>
+<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/lib/chart/nvd3/d3.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/chart/nvd3/nv.d3.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/lib/stream-layers.js&quot;&gt;&lt;/script&gt;</pre>
+<div>
+	&nbsp;</div>
+<h3>
+	Chart Initialize</h3>
+<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/lib/nv.d3.init.js&quot;&gt;&lt;/script&gt;</pre>
+<p>
+	&nbsp;</p>
+<h2>
+	Chart Sparkline</h2>
+<hr>
+<h3>
+	<span style="font-size: 12px;">Dependent files</span></h3>
+<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/lib/chart/sparkline/jquery.sparkline.js&quot;&gt;&lt;/script&gt;</pre>
+<div>
+	&nbsp;</div>
+<h3>
+	Chart Initialize</h3>
+<pre class="prettyprint lang-html linenums">
+&lt;script src=&quot;js/apps.js&quot;&gt;&lt;/script&gt;</pre>
+</section>
+<section id="sources_credits">
+	<div class="page-header"><h3>Sources & Credits</h3><hr class="notop"></div>
+<table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+	<tbody>
+		<tr>
+			<td>
+				<h3>
+					Resources</h3>
+			</td>
+			<td>
+				<h3>
+					Link</h3>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				select2-bootstrap</td>
+			<td>
+				<a href="https://fk.github.io/select2-bootstrap-css/" target="_blank">https://fk.github.io/select2-bootstrap-css/</a></td>
+		</tr>
+		<tr>
+			<td>
+				Tags Input</td>
+			<td>
+				<a href="https://github.com/xoxco/jQuery-Tags-Input" target="_blank">https://github.com/xoxco/jQuery-Tags-Input</a></td>
+		</tr>
+		<tr>
+			<td>
+				Input Mask</td>
+			<td>
+				<a href="http://igorescobar.github.io/jQuery-Mask-Plugin/" target="_blank">http://igorescobar.github.io/jQuery-Mask-Plugin/</a></td>
+		</tr>
+		<tr>
+			<td>
+				iCheck</td>
+			<td>
+				<a href="http://fronteed.com/iCheck/" target="_blank">http://fronteed.com/iCheck/</a></td>
+		</tr>
+		<tr>
+			<td>
+				Selectize</td>
+			<td>
+				<a href="http://brianreavis.github.io/selectize.js/" target="_blank">http://brianreavis.github.io/selectize.js/</a></td>
+		</tr>
+		<tr>
+			<td>
+				Spinner</td>
+			<td>
+				<a href="http://www.virtuosoft.eu/code/bootstrap-touchspin/" target="_blank">http://www.virtuosoft.eu/code/bootstrap-touchspin/</a></td>
+		</tr>
+		<tr>
+			<td>
+				File Style</td>
+			<td>
+				<a href="http://markusslima.github.io/bootstrap-filestyle/" target="_blank">http://markusslima.github.io/bootstrap-filestyle/</a></td>
+		</tr>
+		<tr>
+			<td>
+				jQuery Validate</td>
+			<td>
+				<a href="http://jqueryvalidation.org/" target="_blank">http://jqueryvalidation.org/</a></td>
+		</tr>
+		<tr>
+			<td>
+				Color Pickers</td>
+			<td>
+				<a href="https://github.com/PitPik/tinyColorPicker/" target="_blank">https://github.com/PitPik/tinyColorPicker/</a></td>
+		</tr>
+		<tr>
+			<td>
+				Date Range Picker</td>
+			<td>
+				<a href="https://github.com/dangrossman/bootstrap-daterangepicker" target="_blank">https://github.com/dangrossman/bootstrap-daterangepicker</a></td>
+		</tr>
+		<tr>
+			<td>
+				Summernote</td>
+			<td>
+				<a href="http://summernote.org/" target="_blank">http://summernote.org/&nbsp;</a></td>
+		</tr>
+		<tr>
+			<td>
+				Data Table</td>
+			<td>
+				<a href="https://www.datatables.net/" target="_blank">https://www.datatables.net/</a></td>
+		</tr>
+		<tr>
+			<td>
+				Stack Table</td>
+			<td>
+				<a href="https://github.com/johnpolacek/stacktable.js/" target="_blank">https://github.com/johnpolacek/stacktable.js/</a></td>
+		</tr>
+		<tr>
+			<td>
+				wow JS</td>
+			<td>
+				<a href="http://mynameismatthieu.com/WOW/" target="_blank">http://mynameismatthieu.com/WOW/</a></td>
+		</tr>
+		<tr>
+			<td>
+				Jquery Appear</td>
+			<td>
+				<a href="https://github.com/morr/jquery.appear" target="_blank">https://github.com/morr/jquery.appear</a></td>
+		</tr>
+		<tr>
+			<td>
+				Noty</td>
+			<td>
+				<a href="http://ned.im/noty/#/about" target="_blank">http://ned.im/noty/#/about</a></td>
+		</tr>
+		<tr>
+			<td>
+				switchery</td>
+			<td>
+				<a href="http://abpetkov.github.io/switchery/" target="_blank">http://abpetkov.github.io/switchery/</a></td>
+		</tr>
+		<tr>
+			<td>
+				No UI Slider</td>
+			<td>
+				<a href="http://refreshless.com/nouislider/examples/" target="_blank">http://refreshless.com/nouislider/examples/</a></td>
+		</tr>
+		<tr>
+			<td>
+				BootBox</td>
+			<td>
+				<a href="https://github.com/makeusabrew/bootbox" target="_blank">https://github.com/makeusabrew/bootbox</a></td>
+		</tr>
+		<tr>
+			<td>
+				Sweet Alert</td>
+			<td>
+				<a href="http://t4t5.github.io/sweetalert/" target="_blank">http://t4t5.github.io/sweetalert/</a></td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				Avatar Images</td>
+			<td>
+				<a href="http://uifaces.com/" target="_blank">http://uifaces.com/</a></td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+</section>
+
+	</div>
+</body>
+</html>
