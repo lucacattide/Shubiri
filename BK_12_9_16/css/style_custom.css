@@ -1,0 +1,297 @@
+
+/***********  AGGIUNTE ********************************************************************************************/
+
+.dialogWindowMod
+{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	z-index: 1000000;
+	background-color: rgba(0,0,0,0.60);
+}
+
+.btnAdd-page
+{
+	width: 50px;
+	height: 50px;
+	padding: 10px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.80);
+	overflow: hidden;
+	position: fixed;
+	right: 40px;
+	bottom: 30px;
+	z-index: 10000;
+	background: #f57f17;
+}
+
+.btnAdd-page a i
+{
+	font-size: 3.000rem;
+	margin-left: -4px;
+	margin-top: -1px;
+	color: #FFF;
+}
+
+.dialogWindowMod .modal-dialog.mWidth
+{
+	max-width: 960px;
+	width: calc(100% - 20px);
+}
+
+/* Generale */
+
+body { background-color: #ccc; }
+
+/* Header */
+
+.topbar { background-color: #f6f6f6; }
+
+.page-header.light { background-color: #f6f6f6; }
+
+/* Login */
+
+.login-page { background-image: none; }
+
+/* Header */
+
+.topbar .topbar-left { background-color: transparent; }
+
+.leftbar-view .logo img
+{
+	width: 38%;
+	height: auto;
+	vertical-align: baseline;
+}
+
+.topbar .topbar-right .top-right-icons > li > a .more-noty { background-color: #662483; }
+
+/* Assistenza */
+
+.material-tabs.nav-tabs > li.active > a, .material-tabs.nav-tabs > li> a:hover
+{
+	box-shadow: inset 0 -2px 0 #1D71B8;
+	color: #1D71B8;
+}
+
+.material-tabs.nav-tabs > li.active > a, .material-tabs.nav-tabs > li.active > a:hover
+{
+	box-shadow: inset 0 -2px 0 #1D71B8;
+	color: #1D71B8;
+}
+
+.material-tabs.nav-tabs > li.active > a, .material-tabs.nav-tabs > li.active > a:focus
+{
+	box-shadow: inset 0 -2px 0 #662483;
+	color: #662483;
+}
+
+.chat-user-container h3 .online-counter { color: #1D71B8; }
+
+.chat-user-list > li > div:hover { color: #1D71B8; }
+
+.chat-user-list > li > div:focus { color: #662483; }
+
+.chat-user-list li.chat-u-online i { color: #1D71B8; }
+
+.chat-user-list li.chat-u-busy i { color: #662483; }
+
+.coversation-toolbar .chat-back i:hover
+{
+	background-color: #1D71B8;
+	border: #1D71B8 1px solid;
+}
+
+.coversation-toolbar .chat-back i:focus
+{
+	background-color: #662483;
+	border: #1D71B8 1px solid;
+}
+
+.coversation-toolbar .conversation-action > ul > li i:hover
+{
+	background-color: #1D71B8;
+	border: #1D71B8 1px solid;
+}
+
+.coversation-toolbar .conversation-action > ul > li i:focus
+{
+	background-color: #662483;
+	border: #1D71B8 1px solid;
+}
+
+.coversation-toolbar .conversation-action > ul > li .dropdown-menu > li > a:hover { color: #1D71B8; }
+
+.coversation-toolbar .conversation-action > ul > li .dropdown-menu > li > a:focus { color: #662483; }
+
+.coversation-toolbar .conversation-action > ul > li .dropdown-menu > li > a:hover i
+{
+	background-color: #1D71B8;
+	border: #1D71B8 1px solid;
+}
+
+.coversation-toolbar .conversation-action > ul > li .dropdown-menu > li > a:focus i
+{
+	background-color: #662483;
+	border: #662483 1px solid;
+}
+
+.conversation-row.odd .conversation-list > li { background-color: #1D71B8 !important; }
+
+.conversation-row.odd .conversation-list > li:after { border-right-color: #1D71B8 !important; }
+
+/* Menu */
+
+.topbar .topbar-left .left-toggle-switch { color: #1D71B8; }
+
+.leftbar.material-leftbar { background-color: #f6f6f6; }
+
+.leftbar.material-leftbar .user-profile-container { background: none; }
+
+.leftbar.material-leftbar .user-profile-container .admin-bar ul li a { color: #1D71B8; }
+
+.leftbar.material-leftbar .user-profile-container .admin-bar ul li a:hover, .leftbar.material-leftbar .user-profile-container .admin-bar ul li a:focus { color: #662483; }
+
+.leftbar.material-leftbar .list-accordion > li > a:hover { color: #1D71B8; }
+
+.leftbar.material-leftbar .list-accordion > li > a:focus { color: #662483; }
+
+.leftbar.material-leftbar .list-accordion li ul li a:hover { color: #1D71B8; }
+
+.leftbar.material-leftbar .list-accordion li ul li a:focus { color: #662483; }
+
+.leftbar.material-leftbar .list-accordion > li > a.acc-parent.active { color: #662483; }
+
+/* Breadcrumb */ 
+
+.page-header .list-page-breadcrumb li a:hover { color: #1D71B8; }
+
+.page-header .list-page-breadcrumb li a:focus { color: #662483; }
+
+/* Toolbars */
+
+.widget-header .widget-action-bar > li > a:hover i { color: #1D71B8; }
+
+.widget-header .widget-action-bar > li > a:focus i, .widget-header .widget-action-bar > li > a:active i { color: #662483; }
+
+/* Labels */
+
+.bgAmministratore { background-color: #662483 !important; }
+
+.bgUtente { background-color: #1D71B8 !important; }
+
+.legenda:first-child
+{
+	color: #662483;
+	margin-right: 2%;
+}
+
+.legenda:last-child { color: #1D71B8; }
+
+/* Tags */ 
+
+div.tagsinput span.tag
+{
+	background: #1D71B8;
+	color: #fff;
+}
+
+div.tagsinput span.tag a { color: #fff; }
+
+/* Links */
+
+a, a:link, a:visited { color: #1D71B8; }
+
+a:hover, a:focus
+{
+	color: #662483;
+	text-decoration: none;
+}
+
+/* Pulsanti */
+
+.btnAdd-page
+{
+	bottom: 102px;
+	background: #662483;
+}
+
+.btn-primary
+{
+	background-color: #1D71B8;
+	border-color: #1D71B8;
+	transition: all .3s ease-in-out;
+}
+
+.btn-primary:hover, .btn-primary:focus
+{
+	background-color: #662483;
+	border-color: #662483;
+}
+
+/* Wrapper */ 
+
+.main-container { padding-bottom: 57px; }
+
+.widget-wrap { background-color: #f6f6f6; }
+
+/* Form */
+
+.j-forms input:focus, .j-forms textarea:focus, .j-forms select:focus { border-color: #662483; }
+
+.j-forms .checkbox input + i { color: #1D71B8; }
+
+.j-forms .checkbox input:checked + i
+{
+	color: #662483;
+	border: 2px solid #662483;
+}
+
+.j-forms .checkbox i:after
+{
+	border-bottom: solid #662483;
+	border-left: solid #662483;
+}
+
+.j-forms .success-view input { background: #662483; }
+
+.j-forms .radio input:checked + i, .j-forms .checkbox input:checked + i { color: #662483; }
+
+.j-forms .radio input:checked + i, .j-forms .checkbox input:checked + i, .j-forms .radio-toggle input:checked + i, .j-forms .checkbox-toggle input:checked + i { border: 2px solid #662483; }
+
+.j-forms .radio i:after { background-color: #662483; }
+
+/* Footer */
+
+.footer-container
+{
+	position: fixed;
+	bottom: 0;
+	top: auto;
+	left: 0;
+	right: 0;
+	background-color: #f6f6f6;
+}
+
+.img_footer
+{
+	width: 32px;
+	height: auto;
+}
+
+/* Torna Su */
+
+#scrollTop { bottom: 182px; }
+
+.login-container .logo img { width: 100% }
+
+/* Inizio Mobile ****************************************************************************/
+
+@media all and (max-width: 991px) {
+
+.login-container .logo img { width: 62% }
+}
+
+/* Fine Mobile ****************************************************************************/

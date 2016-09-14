@@ -50,7 +50,9 @@
         <div class="widget-content">
           <div class="row">
             <div class="col-md-12">
-              <form novalidate class="j-forms" action="#">
+              <form novalidate class="j-forms formElement" method="post" enctype="multipart/form-data" novalidate>
+                <input type="hidden" name="modificaArticolo">
+                <input type="hidden" name="articolo_id" value="<?php echo $rowArticolo["articolo_id"];  ?>">
                 <div class="form-content"> 
                   
                   <!-- start text password -->
@@ -70,102 +72,106 @@
                       </div>
                     </div>
                     <div class="col-md-12 unit">
+                      <label class="label">Testo</label>
+                      <div class="input">
+                        <label for="password" class="icon-left"> <i class="fa fa-edit"></i> </label>
+                        <textarea name="articolo_testo"  spellcheck="false" placeholder="Inserire il testo" class="form-control"><?php echo $rowArticolo["articolo_testo"]; ?></textarea>
+                      </div>
+                    </div>
+                    <div class="col-md-12 unit">
                       <label class="label">URL SEF</label>
                       <div class="input">
                         <label for="url" class="icon-left"> <i class="fa fa-globe"></i> </label>
-                        <input type="text" placeholder="Inserire l'URL parlante" class="form-control" value="<?php echo $rowArticolo["articolo_url"]; ?>">
+                        <input name="articolo_url" type="text" placeholder="Inserire l'URL" class="form-control" value="<?php echo $rowArticolo["articolo_url"]; ?>">
                       </div>
                     </div>
+                    <div class="col-md-12">
+                      <label class="label">Stato di pubblicazione</label>
+                      <div class="col-md-4">
+                        <label class="radio">
+                          <input type="radio" <?php if( $rowArticolo["articolo_visibile"] == 1 ): echo "checked"; endif; ?> name="articolo_visibile" value="1">
+                          <i></i>Pubblica</label>
+                      </div>
+                      <div class="col-md-4">
+                        <label class="radio">
+                          <input type="radio" <?php if( $rowArticolo["articolo_visibile"] == 2 ): echo "checked"; endif; ?> name="articolo_visibile" value="2">
+                          <i></i>Bozza</label>
+                      </div>
+                       <div class="col-md-4">
+                        <label class="radio">
+                          <input type="radio" <?php if( $rowArticolo["articolo_visibile"] == 3 ): echo "checked"; endif; ?> name="articolo_visibile" value="3">
+                          <i></i>Archivia</label>
+                      </div>
+                    </div>
+                  
                   </div>
                   <!-- end text password --> 
                   
                   <!-- start email url -->
                   <div class="row col-md-6">
-                    
-                    <div class="col-md-12 unit">
-                      <label class="label">Testo</label>
-                      <div class="input">
-                        <label for="password" class="icon-left"> <i class="fa fa-edit"></i> </label>
-                        <textarea name="articolo_testo"  spellcheck="false" placeholder="Inserire il corpo del testo" class="form-control"><?php echo $rowArticolo["articolo_testo"]; ?></textarea>
+                    <div class="Gal col-md-12 unit">
+                        <label class="label">Inserisci immagini o pdf</label>
+                        <div class="input prepend-small-btn">
+                            <div class="file-button">
+                                Browse
+                                <input type="file" class="fileUpload2" rel="<?php echo $rowArticolo["articolo_id"]; ?>" name="file[]" multiple/>
+                            </div>
+                            <input type="text" placeholder="no file selected" readonly id="prepend-small-btn" class="form-control">
+                         </div>
+                     </div>
+                     <div  class="blah col-md-12 image-holder2 unit" rel="<?php echo $rowArticolo["articolo_id"]; ?>" >
+                     	<div class="row col-md-12"></div>
+                     </div>
+                     <!-- container img -->
+                     <div class="col-md-12">
+                       
+                            <div class='col-sm-12 col-md-12 nopadding'>
+                             <hr>
+                            </div>
+							<?php 
+                               //GESTIONE IMMAGINI LOOP NELL ARTICOLO
+                               $sqlImmagine = "SELECT * FROM `immagine` WHERE immagine_articolo_id = '".$rowArticolo["articolo_id"]."' ";
+                               $rImmagine = $mysqli->query($sqlImmagine);
+                               $countImmagine =  $rImmagine->num_rows;
+                               if( $countImmagine >= 1 ):
+                                while ( $rowImmagine = $rImmagine->fetch_array() ):
+                               ?>
+                                 <div class="col-sm-6 col-md-6 nopadding boxImgMod">
+                                   <div class="col-sm-12 col-md-12 nopadding">
+                                   	<img class='thumb-image col-md-12' src="img/<?php echo $rowImmagine["immagine_label"];  ?>" />
+                                   </div>  
+                                   <div class="col-sm-12 col-md-12" >
+                                     <form class="formElementDimg" method="post" enctype="multipart/form-data" novalidate>
+                                      <input type="hidden" name="eliminaImmagine">
+                                      <input type="hidden" name="immagine_id" value="<?php echo $rowImmagine["immagine_id"];  ?>">
+                                      <button class="btn btn-warning col-md-12" type="submit">Elimina</button>
+                                     </form>
+                                   </div> 
+                                 </div>  
+                               <?php  
+                                endwhile;  
+                                endif;    
+                               ?>
+                      <!-- END container img -->   
                       </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="col-md-4">
-                        <label class="radio">
-                          <input type="radio" <?php if( $rowArticolo["articolo_visibile"] == 1 ): echo "checked"; endif; ?> name="radio" value="1">
-                          <i></i>Pubblica</label>
-                      </div>
-                      <div class="col-md-4">
-                        <label class="radio">
-                          <input type="radio" <?php if( $rowArticolo["articolo_visibile"] == 2 ): echo "checked"; endif; ?> name="radio" value="2">
-                          <i></i>Bozza</label>
-                      </div>
-                       <div class="col-md-4">
-                        <label class="radio">
-                          <input type="radio" <?php if( $rowArticolo["articolo_visibile"] == 3 ): echo "checked"; endif; ?> name="radio" value="3">
-                          <i></i>Archivia</label>
+                  </div>
+                  <!-- end email url -->
+                  
+                  <div class="row col-md-12">
+                    <div style="clear:both;"></div>
+                    <hr>
+                    <div style="clear:both;"></div>
+                    <div class="col-md-12 col-sm-12">
+                      <div class="btn-ex-container">
+                        <button class="btn btn-primary" type="submit">Modifica Articolo</button>
                       </div>
                     </div>
                   </div>
-                  <!-- end email url --> 
-                  
-                  
                   
                 </div>
                 <!-- end /.content -->
-                
-                <div class="row col-md-12">
-                 <div class="col-md-12 unit">
-                
-                 <?php 
-                   
-				   $sqlImmagine = "SELECT * FROM `immagine` WHERE immagine_articolo_id = '".$rowArticolo["articolo_id"]."' ";
-                   
-				   $rImmagine = $mysqli->query($sqlImmagine);
-                   
-				   $countImmagine =  $rImmagine->num_rows;
-				   
-				   if( $countImmagine >= 1 ):
-				    
-					while ( $rowImmagine = $rImmagine->fetch_array() ):
-		 
-				 ?>
+
                  
-                 
-                    <div class="dz-preview dz-file-preview">
-                    <form novalidate class="j-forms formElementDimg" action="#">
-                      <input type="hidden" name="eliminaImmagine" />
-                      <input type="hidden" name="immagine_id" value="<?php echo $rowImmagine["immagine_label"];  ?>" />
-                      <div class="dz-details">
-                        <img data-dz-thumbnail src="img/<?php echo $rowImmagine["immagine_label"];  ?>" />
-                        <div class="dz-filename"><span data-dz-name><?php echo $rowImmagine["immagine_label"]; ?></span></div>
-                        <button type="submit">Elimina</button>
-                      </div>
-                    </div>
-                     
-                  
-                 <?php 
-				    
-					endwhile;  
-				    
-				    endif; 
-					
-				  ?>
-                 
-                 </div> 
-                </div>
-                
-                
-                <div class="row col-md-12">
-                  <div style="clear:both;"></div>
-                  <div class="col-md-2 col-sm-2">
-                    <div class="btn-ex-container">
-                      <button class="btn btn-primary" type="submit">Crea articolo</button>
-                      <i class="zmdi"></i>
-                      <button class="btn" type="reset">Annulla</button>
-                    </div>
-                  </div>
-                </div>
                 
                 <!-- end /.footer -->
                 
@@ -183,6 +189,6 @@
   </div>
 </div>
 <?php 
-	 endwhile;
+   endwhile;
    endif;	 
 ?>

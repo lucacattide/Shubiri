@@ -4,10 +4,11 @@
  
  /* CONDIZIONI RISPOSTE AJAX */
  $pag = $_POST["pag"];
+ $id = $_POST["id"];
  
 /* PAGE *****************************************************/
  
-if($pag == "pagina"):
+if($pag == "pagina" || $pag == ""  ):
     $sqlPagina = "SELECT * FROM `pagina`"; 
 	$rPagina = $mysqli->query($sqlPagina);
 	while ( $rowPagina = $rPagina->fetch_array() ):
@@ -128,7 +129,9 @@ if($pag == "pagina"):
 <?php 
  endwhile;
 endif; 	
-/* END PAGE *****************************************************/		 /* ARTICOLO *****************************************************/	
+/* END PAGE *****************************************************/		 
+
+/* ARTICOLO *****************************************************/	
 if($pag == "crea-pagina"): 
 ?>
 <div class="modal-content">
@@ -160,18 +163,6 @@ if($pag == "crea-pagina"):
                   <textarea name="articolo_sottotitolo"  spellcheck="false" placeholder="Inserire il sottotitolo" class="form-control"></textarea>
                 </div>
               </div>
-            </div>
-            <!-- end text password --> 
-            
-            <!-- start email url -->
-            <div class="row col-md-6">
-              <div class="col-md-12 unit">
-                <label class="label">URL SEF</label>
-                <div class="input">
-                  <label for="url" class="icon-left"> <i class="fa fa-globe"></i> </label>
-                  <input name="articolo_url" type="text" placeholder="Inserire l'URL" class="form-control">
-                </div>
-              </div>
               <div class="col-md-12 unit">
                 <label class="label">Testo</label>
                 <div class="input">
@@ -179,7 +170,15 @@ if($pag == "crea-pagina"):
                   <textarea name="articolo_testo"  spellcheck="false" placeholder="Inserire il testo" class="form-control"></textarea>
                 </div>
               </div>
+              <div class="col-md-12 unit">
+                <label class="label">URL SEF</label>
+                <div class="input">
+                  <label for="url" class="icon-left"> <i class="fa fa-globe"></i> </label>
+                  <input name="articolo_url" type="text" placeholder="Inserire l'URL" class="form-control">
+                </div>
+              </div>
               <div class="col-md-12">
+                 <label class="label">Stato di pubblicazione</label>
                 <div class="col-md-4">
                   <label class="radio">
                     <input type="radio" name="articolo_visibile" value="1">
@@ -190,39 +189,41 @@ if($pag == "crea-pagina"):
                     <input type="radio" checked="" name="articolo_visibile" value="2">
                     <i></i>Bozza</label>
                 </div>
-                <div class="col-md-4">
-                  <label class="radio">
-                    <input type="radio" name="articolo_visibile" value="3">
-                    <i></i>Archivia</label>
-                </div>
+              </div>
+            </div>
+            <!-- end text password --> 
+            
+            <!-- start email url -->
+            <div class="row col-md-6">
+              <div class="Gal col-md-12 unit">
+                <label class="label">Inserisci immagini o pdf</label>
+                <div class="input prepend-small-btn">
+                    <div class="file-button">
+                        Browse
+                        <input type="file" id="fileUpload" name="file[]" multiple/>
+                    </div>
+                    <input type="text" placeholder="no file selected" readonly="" id="prepend-small-btn" class="form-control">
+                 </div>
+              </div>
+              <div id="image-holder" class="blah col-md-12 unit">
+               <div class="row col-md-12"></div>
               </div>
             </div>
             <!-- end email url -->
-            
-            <div class="row col-md-12">
-                   <div class="Gal col-md-12 unit">
-                     <form action="../../upload.php" class="dropzone" id="my-awesome-dropzone">
-                      <input type="hidden" name="param" value="1" />
-                        <div class="fallback">
-                         <input name="file" type="file" multiple>
-                        </div>
-                        <div class="dz-message">
-                          <h3>Trascina le immagini oppure clicca qui per selezionarle</h3>
-                          <h4>FILE MAX SIZE: 1 MB | Larghezza:1280px | Altezza: 720px | FORMATI: JPG, PNG, GIFF </h4>
-                         <!-- <p class="lead">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</p> -->
-                        </div>
-                     </form>
+   
+          
+             <div class="row col-md-12">
+                  <div style="clear:both; margin-top:20px;"></div>
+                  <div class="col-md-12 col-sm-12">
+                    <div class="btn-ex-container">
+                      <button class="btn btn-primary" type="submit">Crea articolo</button>
+                      <i class="zmdi"></i>
+                      <button class="btn" type="reset">Annulla</button>
+                    </div>
                   </div>
-             </div>
-           
-            <div class="row">
-              <div style="clear:both;"></div>
-              <div class="col-md-4 col-sm-4">
-                <div class="btn-ex-container">
-                  <button class="btn btn-primary" type="submit">Aggiungi Articolo</button>
                 </div>
-              </div>
-            </div>
+            
+            
           </div>
         </form>
       </div>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
+<!-- <meta charset="utf-8"> -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 <title>Shubiri | Amministrazione</title>
@@ -18,10 +18,10 @@
 <link type="text/css" rel="stylesheet" href="css/bootstrap-extend.css">
 <link type="text/css" rel="stylesheet" href="css/common.css">
 <link type="text/css" rel="stylesheet" href="css/responsive.css">
-    <link type="text/css" rel="stylesheet" href="css/basic.css">
-    <link type="text/css" rel="stylesheet" href="css/basic.min.css">
-    <link type="text/css" rel="stylesheet" href="css/dropzone.css">
-    <link type="text/css" rel="stylesheet" href="css/dropzone.min.css">
+<link type="text/css" rel="stylesheet" href="css/basic.css">
+<link type="text/css" rel="stylesheet" href="css/basic.min.css">
+<link type="text/css" rel="stylesheet" href="css/dropzone.css">
+<link type="text/css" rel="stylesheet" href="css/dropzone.min.css">
 <link type="text/css" rel="stylesheet" href="css/style.css">
 <link type="text/css" rel="stylesheet" href="css/style_custom.css">
 <link rel="icon" type="image/png" href="favicon.png" />
@@ -46,9 +46,22 @@
   <div class="topbar-left pull-left">
     <div class="clearfix">
       <ul class="left-branding pull-left clickablemenu ttmenu dark-style menu-color-gradient">
-        <li><span class="left-toggle-switch"><i class="zmdi zmdi-menu"></i></span> <span class="logo"> <a href="index.php" title="Shubiri"> 
+        <li>
+          <span class="left-toggle-switch">
+            <i class="zmdi zmdi-menu"></i>
+           </span> 
+        </li>
+       
+        	<span class="logo"> 
+         		<a href="index.php" title="Shubiri"> 
+           
+           
           <!-- <h3 style="margin-top:15px;">Shubiri</h3>--> 
-          <img src="images/logo_shubiri.svg" alt="Shubiri" /> </a> </span> </li>
+           			 <img src="images/logo_shubiri.svg" alt="Shubiri" /> 
+          		 </a> 
+           </span> 
+           
+       
       </ul>
       <!--Mobile Search and Rightbar Toggle-->
       <ul class="branding-right pull-right">
@@ -402,6 +415,7 @@
 <script src="js/lib/jquery.bootstrap-touchspin.js"></script> 
 <script src="js/lib/bootstrap-filestyle.js"></script> 
 <script src="js/lib/selectize.js"></script> 
+<script src="js/tiny_mce/tiny_mce.js"></script> 
 
 <!--Forms--> 
 <script src="js/lib/jquery.maskedinput.js"></script> 
@@ -421,12 +435,71 @@
 /* DOCUMENT READY */
 $(document).ready(function(e) {
 	
-	
-	 
 
-	  $(".Gal2").dropzone({ url: "upload2.php"});
+// UPLOAD NEW IMG ON ARTICLE ///////////////////////////////////////////////////
+
+$(".fileUpload2").on('change', function () {
+  var fileCount = $(this)[0].files.length;
+  var relAttr = $(this).attr("rel");
+  for(  var i = 0; i < fileCount; i++   ){
+	
+	if (typeof (FileReader) != "undefined") {
+
+		var image_holder = $(".image-holder2[rel="+ relAttr +"] .row");
+		image_holder.empty();
+
+		var reader = new FileReader();
+		reader.onload = function (e) {
+			
+			$("<div class='col-sm-6 col-md-6 nopadding'><img class='thumb-image col-md-12' src='" + e.target.result +"' /></div>").appendTo(image_holder);
+
+		}
+		image_holder.show();
+		reader.readAsDataURL($(this)[0].files[i]);
+	} else {
+		alert("This browser does not support FileReader.");
+	}
+   }
+});
+	
+	
+// EDITOR TESTO ///////////////////////////////////////////////////////////////
+	 tinyMCE.init({
+        // General options
+        mode : "textareas",
+        theme : "advanced",
+        plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
+        
+        // Theme options
+		theme_advanced_buttons1 : "bold,italic,underline,|,cut,copy,pastetext,pasteword,|,styleselect,forecolor,|,link,unlink,image,code,|,forecolor|,fullscreen",
+        //theme_advanced_buttons2 : "",
+        //theme_advanced_buttons3 : "",
+        //theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak",
+        theme_advanced_toolbar_location : "top",
+        theme_advanced_toolbar_align : "left",
+        theme_advanced_statusbar_location : "bottom",
+        theme_advanced_resizing : true,
+		style_formats: [
+			    {title : 'Bold text', inline : 'b'},
+                {title : 'Red text', inline : 'span', styles : {color : '#ff0000'}},
+                {title : 'Red header', block : 'h1', styles : {color : '#ff0000'}},
+                {title : 'Example 1', inline : 'span', classes : 'example1'},
+                {title : 'Example 2', inline : 'span', classes : 'example2'},
+		  ],
+
+        // Example content CSS (should be your site CSS)
+        content_css : "css/example.css",
+
+        // Drop lists for link/image/media/template dialogs
+        template_external_list_url : "js/template_list.js",
+        external_link_list_url : "js/link_list.js",
+        external_image_list_url : "js/image_list.js",
+        media_external_list_url : "js/media_list.js",
+      });
+
+	
 	  
-    
+// EVENTI ///////////////////////////////////////////////////////////////////   
 
 	  /* VARIABILE PASSAGGIO VALORI FORM DI MODIFICA */
 	  $(document).on("click", 'a.modifica', function(e){
@@ -440,7 +513,6 @@ $(document).ready(function(e) {
 			  $(".dialogWindowMod .modal-header .bootbox-close-button, chiudi").on("click", function(){
 				  $(".dialogWindowMod").fadeOut(1000);
 				  $(".dialogWindowMod").removeClass("mWidth"); 
-				  
 			  });
 			     /**
 				   * Tags Input
@@ -484,13 +556,70 @@ $(document).ready(function(e) {
 			 $.post("php/config/forms_aggiungi.php", { pag: "<?php echo $pag; ?>", id: "<?php if(empty($_GET["id"])):  else: echo $_GET["id"]; endif; ?>" }, function(data){
 			  $(".dialogWindowMod .modal-dialog").empty();	
 			  $(".dialogWindowMod .modal-dialog").html(data);
-			  $(".Gal").dropzone({ url: "upload.php" });
+			  
 			  $(".dialogWindowMod .modal-header .bootbox-close-button").on("click", function(){
 				  $(".dialogWindowMod").fadeOut(1000);
 				  $(".dialogWindowMod").removeClass("mWidth"); 
 			  });
-		
 			  
+			  // EDITOR TESTO ///////////////////////////////////////////////////////////////
+			   tinyMCE.init({
+				  // General options
+				  mode : "textareas",
+				  theme : "advanced",
+				  plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
+				  
+				  // Theme options
+				  theme_advanced_buttons1 : "bold,italic,underline,|,cut,copy,pastetext,pasteword,|,styleselect,forecolor,|,link,unlink,image,code,|,forecolor|,fullscreen",
+				  //theme_advanced_buttons2 : "",
+				  //theme_advanced_buttons3 : "",
+				  //theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak",
+				  theme_advanced_toolbar_location : "top",
+				  theme_advanced_toolbar_align : "left",
+				  theme_advanced_statusbar_location : "bottom",
+				  theme_advanced_resizing : true,
+				  style_formats: [
+						  {title : 'Bold text', inline : 'b'},
+						  {title : 'Red text', inline : 'span', styles : {color : '#ff0000'}},
+						  {title : 'Red header', block : 'h1', styles : {color : '#ff0000'}},
+						  {title : 'Example 1', inline : 'span', classes : 'example1'},
+						  {title : 'Example 2', inline : 'span', classes : 'example2'},
+					],
+		  
+				  // Example content CSS (should be your site CSS)
+				  content_css : "css/example.css",
+		  
+				  // Drop lists for link/image/media/template dialogs
+				  template_external_list_url : "js/template_list.js",
+				  external_link_list_url : "js/link_list.js",
+				  external_image_list_url : "js/image_list.js",
+				  media_external_list_url : "js/media_list.js",
+				});
+				
+		
+		 		$("#fileUpload").on('change', function () {
+                    var fileCount = $(this)[0].files.length;
+					for(  var i = 0; i < fileCount; i++   ){
+					  
+					  if (typeof (FileReader) != "undefined") {
+			   
+						  var image_holder = $("#image-holder .row");
+						  image_holder.empty();
+			   
+						  var reader = new FileReader();
+						  reader.onload = function (e) {
+							  
+							  $("<div class='col-sm-6 col-md-6 nopadding'><img class='thumb-image col-md-12' src='" + e.target.result +"' /></div>").appendTo(image_holder);
+			   
+						  }
+						  image_holder.show();
+						  reader.readAsDataURL($(this)[0].files[i]);
+					  } else {
+						  alert("This browser does not support FileReader.");
+					  }
+					 }
+				  });
+							  
 			     
 			     /**
 				   * Tags Input

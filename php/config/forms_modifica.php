@@ -72,7 +72,7 @@ endif;
 	
 
 /* PAGE *********************************************************/
-if($pag == "pagina"):
+if($pag == "pagina" || $pag == ""):
     $sqlPagina = "SELECT * FROM `pagina` WHERE pagina_id = '".$id."' "; 
 	$rPagina = $mysqli->query($sqlPagina);
 	while ( $rowPagina = $rPagina->fetch_array() ): 
