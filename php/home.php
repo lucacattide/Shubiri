@@ -428,7 +428,6 @@
 <script src="js/lib/dropzone.js"></script>
 <script src="js/lib/jquery.sortable.min.js" type="text/javascript"></script>
 
-
 <!--AJAX--> 
 <script type="text/javascript">
 
@@ -510,7 +509,7 @@ $(".fileUpload2").on('change', function () {
 			 $.post("php/config/forms_modifica.php", { pag: "<?php echo $pag; ?>", id:ID  }, function(data){
 			  $(".dialogWindowMod .modal-dialog").empty();	
 			  $(".dialogWindowMod .modal-dialog").html(data);
-			  $(".dialogWindowMod .modal-header .bootbox-close-button, chiudi").on("click", function(){
+			  $(".dialogWindowMod .modal-header .bootbox-close-button, .chiudi").on("click", function(){
 				  $(".dialogWindowMod").fadeOut(1000);
 				  $(".dialogWindowMod").removeClass("mWidth"); 
 			  });

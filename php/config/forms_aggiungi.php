@@ -32,7 +32,7 @@ if($pag == "pagina" || $pag == ""  ):
                 <label class="label">URL SEF</label>
                 <div class="input">
                   <label class="icon-left" for="text"> <i class="zmdi zmdi-globe"></i> </label>
-                  <input required name="pagina_url" class="form-control" type="text" placeholder="nome-url-pagina" >
+                  <input required name="pagina_url" class="form-control" type="text" placeholder="nome-url-pagina" pattern="/[^a-z0-9\s]/ig">
                 </div>
               </div>
               <!-- END URL PAGINA -->  
@@ -108,12 +108,10 @@ if($pag == "pagina" || $pag == ""  ):
             
             <div class="row">  
               <div style="clear:both;"></div>
-              <div class="col-md-4 col-sm-4">
-                <div class="btn-ex-container">
+              <div class="modal-footer">
                   <button class="btn btn-primary" type="submit">Aggiungi Pagina</button>
                   <i class="zmdi"></i>
                   <button class="btn" type="reset">Annulla</button>
-                </div>
               </div>
              
             </div>
@@ -174,7 +172,7 @@ if($pag == "crea-pagina"):
                 <label class="label">URL SEF</label>
                 <div class="input">
                   <label for="url" class="icon-left"> <i class="fa fa-globe"></i> </label>
-                  <input name="articolo_url" type="text" placeholder="Inserire l'URL" class="form-control">
+                  <input name="articolo_url" type="text" placeholder="Inserire l'URL" class="form-control" pattern="/[^a-z0-9\s]/ig">
                 </div>
               </div>
               <div class="col-md-12">
@@ -196,17 +194,36 @@ if($pag == "crea-pagina"):
             <!-- start email url -->
             <div class="row col-md-6">
               <div class="Gal col-md-12 unit">
-                <label class="label">Inserisci immagini o pdf</label>
+                <label class="label">Inserisci immagini o documenti*</label>
                 <div class="input prepend-small-btn">
                     <div class="file-button">
-                        Browse
+                        Sfoglia
                         <input type="file" id="fileUpload" name="file[]" multiple/>
                     </div>
-                    <input type="text" placeholder="no file selected" readonly="" id="prepend-small-btn" class="form-control">
+                    <input type="text" placeholder="no file selected" readonly id="prepend-small-btn" class="form-control">
                  </div>
               </div>
               <div id="image-holder" class="blah col-md-12 unit">
-               <div class="row col-md-12"></div>
+               <div class="row col-md-12">
+               
+               		<span class="col-md-4">
+                    </span>
+                    <h3 class="anteprima col-md-4">
+                    
+                        Anteprima
+                        
+                    </h3>
+                    <span class="col-md-4">
+                    </span>
+       
+               </div>
+              </div>
+              <div class='col-sm-12 col-md-12 unit'>
+               <small>
+               
+                  * Tipologie ammesse: .jpg, .png, .pdf
+               
+               </small>
               </div>
             </div>
             <!-- end email url -->
@@ -214,12 +231,10 @@ if($pag == "crea-pagina"):
           
              <div class="row col-md-12">
                   <div style="clear:both; margin-top:20px;"></div>
-                  <div class="col-md-12 col-sm-12">
-                    <div class="btn-ex-container">
+                  <div class="modal-footer">
                       <button class="btn btn-primary" type="submit">Crea articolo</button>
                       <i class="zmdi"></i>
                       <button class="btn" type="reset">Annulla</button>
-                    </div>
                   </div>
                 </div>
             

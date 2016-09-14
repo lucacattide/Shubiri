@@ -78,13 +78,13 @@
 
 
             <!-- start keep logged -->
-          <!--  <div class="unit">
+            <div class="unit">
                 <label class="checkbox">
                     <input type="checkbox" name="logged" value="false" checked="">
                     <i></i>
                     Ricordami
                 </label>
-            </div>-->
+            </div>
             <!-- end keep logged -->
 
             <!-- start response from server -->
@@ -95,7 +95,7 @@
 
         </div>
         <div class="login-form-footer">
-            <button name="login" type="submit" class="btn-block btn btn-primary">Login</button>
+            <button id="login_cms" name="login" type="submit" class="btn-block btn btn-primary">Login</button>
         </div>
 
     </form>
@@ -134,5 +134,6 @@
 <script src="js/lib/smart-resize.js"></script>
 <script src="js/lib/jquery.validate.js"></script>
 <script src="js/lib/login-validation.js"></script>
+<script tyoe="text/javascript" src="js/lib/cookies.js"></script> <!--Cookies-->
 </body>
 </html>

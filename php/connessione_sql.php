@@ -2,7 +2,7 @@
 
 if( $_SERVER['SERVER_NAME'] == "localhost" ){	
 	$host="localhost";
-    $user="root";
+    $user="luca";
     $password="";
     $db="amministrazione";
 	

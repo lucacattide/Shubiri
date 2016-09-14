@@ -43,12 +43,10 @@ if($pag == "account"):
                                     <p><small><span class="legenda">2 - Amministratore</span><span class="legenda">3 - Utente</span></small></p>
                                   </div>
                                   <div style="clear:both;"></div>
-                                  <div class="col-md-4 col-sm-4">
-                                    <div class="btn-ex-container">
+                                  <div class="modal-footer">
                                       <button class="btn btn-primary" type="submit">Modifica dati</button>
                                       <i class="zmdi"></i>
                                       <button class="chiudi btn bootbox-close-button" data-dismiss="modal" type="button">Chiudi</button>
-                                    </div>
                                   </div>
                                 </div>
                                 </div>
@@ -97,7 +95,7 @@ if($pag == "pagina" || $pag == ""):
                 <label class="label">URL SEF</label>
                 <div class="input">
                   <label class="icon-left" for="text"> <i class="zmdi zmdi-globe"></i> </label>
-                  <input  name="pagina_url" class="form-control" type="text" placeholder="nome-url-pagina" value="<?php echo $rowPagina["pagina_url"]; ?>" >
+                  <input  name="pagina_url" class="form-control" type="text" placeholder="nome-url-pagina" value="<?php echo $rowPagina["pagina_url"]; ?>" pattern="/[^a-z0-9\s]/ig">
                 </div>
               </div>
               <!-- END URL PAGINA -->  
@@ -173,12 +171,10 @@ if($pag == "pagina" || $pag == ""):
             
             <div class="row">  
               <div style="clear:both;"></div>
-              <div class="col-md-4 col-sm-4">
-                <div class="btn-ex-container">
+              <div class="modal-footer">
                   <button class="btn btn-primary" type="submit">Modifica pagina</button>
                   <i class="zmdi"></i>
-                  <button class="btn bootbox-close-button chiudi" data-dismiss="modal">Chiudi</button>
-                </div>
+                  <button class="btn bootbox-close-button chiudi" data-dismiss="modal" type="button">Chiudi</button>
               </div>
              
             </div>

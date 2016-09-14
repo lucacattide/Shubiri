@@ -82,7 +82,7 @@
                       <label class="label">URL SEF</label>
                       <div class="input">
                         <label for="url" class="icon-left"> <i class="fa fa-globe"></i> </label>
-                        <input name="articolo_url" type="text" placeholder="Inserire l'URL" class="form-control" value="<?php echo $rowArticolo["articolo_url"]; ?>">
+                        <input name="articolo_url" type="text" placeholder="Inserire l'URL" class="form-control" value="<?php echo $rowArticolo["articolo_url"]; ?>" pattern="/[^a-z0-9\s]/ig">
                       </div>
                     </div>
                     <div class="col-md-12">
@@ -110,23 +110,50 @@
                   <!-- start email url -->
                   <div class="row col-md-6">
                     <div class="Gal col-md-12 unit">
-                        <label class="label">Inserisci immagini o pdf</label>
+                        <label class="label">Inserisci immagini o documenti*</label>
                         <div class="input prepend-small-btn">
                             <div class="file-button">
-                                Browse
+                                Sfoglia
                                 <input type="file" class="fileUpload2" rel="<?php echo $rowArticolo["articolo_id"]; ?>" name="file[]" multiple/>
                             </div>
                             <input type="text" placeholder="no file selected" readonly id="prepend-small-btn" class="form-control">
                          </div>
                      </div>
                      <div  class="blah col-md-12 image-holder2 unit" rel="<?php echo $rowArticolo["articolo_id"]; ?>" >
-                     	<div class="row col-md-12"></div>
+                     	<div class="row col-md-12">
+                        
+                        	<span class="col-md-4">
+                            </span>
+                        	<h3 class="anteprima col-md-4">
+                            
+                            	Anteprima
+                                
+                            </h3>
+                            <span class="col-md-4">
+                            </span>
+                        
+                        </div>
                      </div>
                      <!-- container img -->
                      <div class="col-md-12">
                        
                             <div class='col-sm-12 col-md-12 nopadding'>
+                             <small>
+                             
+                             	* Tipologie ammesse: .jpg, .png, .pdf
+                             
+                             </small>
                              <hr>
+                              <span class="col-md-4">
+                              
+                                  Immagini allegate
+                                  
+                              </span>
+                               <span class="col-md-4">
+                              </span>
+                             
+                              <span class="col-md-4">
+                              </span>
                             </div>
 							<?php 
                                //GESTIONE IMMAGINI LOOP NELL ARTICOLO
