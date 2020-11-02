@@ -1,4 +1,7 @@
-
+/Documentation
+/tinymce/examples
+BK_*
+_notes
 .DS_Store
-
-.DS_Store
+.vscode
+._*
